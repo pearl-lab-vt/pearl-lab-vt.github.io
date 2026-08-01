@@ -44,34 +44,32 @@ accounts may show it as "Content Inbox"). Add:
 https://pearl-lab-vt.github.io/feed.xml
 ```
 
-**4.** Set the behaviour to **add to queue for approval** rather than post
-automatically. A lab account posting unreviewed is a bad trade for the small
-convenience.
+**4.** Buffer's Feeds do **not** post by themselves. New items appear in a
+reading view and you click **Create Post** on the ones you want, which opens a
+composer already carrying the title, the summary and the link. One click per
+item; the writing is already done.
 
-**5.** Confirm it is working. Buffer should show the feed as valid with zero
-items. Zero is correct — see the next section.
+**5.** Confirm it loads and shows your recent news items.
 
 ---
 
-## Why the feed starts empty
+## What goes in the feed
 
-`data/news.json` carries a `feed_since` date:
+`feed.xml` carries the most recent `feed_max_items` published news items,
+20 by default. That is what feed readers expect, and it matters more than it
+sounds: **an empty feed is rejected outright by most readers, Buffer included,
+with a generic "couldn't load feed" error.** If Buffer ever refuses your feed,
+open `https://pearl-lab-vt.github.io/feed.xml` and count the `<item>` elements
+before suspecting anything else.
 
-```json
-"feed_since": "2026-08-01"
-```
+`data/news.json` also has a `feed_since` field, normally **blank**. Setting it
+to a date keeps everything older out of the feed. You only want that if you
+move to a tool that posts *automatically* — an auto-poster reading a full feed
+for the first time will push the whole archive to the company page at once.
+With Buffer's click-to-post model there is nothing to guard against, so leave
+it empty.
 
-Only items dated on or after that date enter `feed.xml`. Everything earlier
-stays on the website but out of the feed.
-
-This exists because RSS-to-social tools post *everything* they find the first
-time they read a feed. Without the guard, connecting Buffer would dump two
-years of archived news onto the company page in one burst. The first item you
-publish after setup will be the first thing that posts.
-
-Leave `feed_since` alone once the site is live. If you ever do want to
-backfill something old, move that item's date forward rather than moving the
-cutoff back, so the rest of the archive stays put.
+`scripts/build.py` warns on stderr if a build produces a feed with no items.
 
 ---
 

@@ -120,7 +120,7 @@ def main() -> int:
     say()
     if will_post:
         say(f"   {YELLOW}{BOLD}These will be posted to LinkedIn{OFF} "
-            f"{DIM}(via the RSS feed, once Buffer picks them up):{OFF}")
+            f"{DIM}(they enter the RSS feed; pick them up in Buffer):{OFF}")
         for i in will_post:
             say(f"     · {i['title']}")
             body = i["summary"]
@@ -206,8 +206,8 @@ def main() -> int:
     say(f"   Build:  https://github.com/{org}/{org_repo}/actions")
     say(f"   Live:   {site['url']}  {DIM}(about a minute){OFF}")
     if will_post:
-        say(f"   LinkedIn: {len(will_post)} item(s) will appear in your Buffer queue "
-            f"{DIM}within the hour{OFF}")
+        say(f"   LinkedIn: {len(will_post)} item(s) will show in your Buffer feed "
+            f"{DIM}within the hour, ready to post{OFF}")
     return 0
 
 

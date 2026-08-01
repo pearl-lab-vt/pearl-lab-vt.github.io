@@ -20,7 +20,7 @@ and committing it. There is no Jekyll, no theme, no Gemfile, no `npm install`.
 3. Push this folder to it:
 
    ```bash
-   cd ~/Library/CloudStorage/OneDrive-VirginiaTech/Web/pearl-lab-web
+   cd ~/Library/CloudStorage/OneDrive-VirginiaTech/Web/pearl-lab-vt.github.io
    git init -b main
    git add .
    git commit -m "Initial PEARL Lab site"

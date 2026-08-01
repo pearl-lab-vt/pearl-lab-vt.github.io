@@ -162,8 +162,14 @@ def build_articles(site: dict, items: list[dict]) -> int:
 
 
 def build_feed(site: dict, news: dict, items: list[dict]) -> int:
-    since = news.get("feed_since")
-    feed_items = [i for i in items if not since or i["date"] >= since]
+    # A feed carries the most recent N items — that is what readers expect, and
+    # an EMPTY feed is rejected outright by most of them (Buffer included).
+    # feed_since is an optional floor: leave it blank for normal behaviour, and
+    # set it to today's date only if you switch to a tool that AUTO-posts, so
+    # the backlog cannot be dumped onto social media in one burst.
+    since = news.get("feed_since") or None
+    limit = int(news.get("feed_max_items") or 20)
+    feed_items = [i for i in items if not since or i["date"] >= since][:limit]
     base = site["url"].rstrip("/")
 
     parts = [
@@ -237,6 +243,9 @@ def main() -> int:
     print(f"OK  {n_articles} news pages, {n_feed} feed entries, {drafts} drafts skipped")
     if news.get("feed_since"):
         print(f"    feed_since={news['feed_since']} (older items are on the site but not in the feed)")
+    if n_feed == 0:
+        print("    WARNING: the feed has no items. Most readers reject an empty "
+              "feed — clear feed_since in data/news.json.", file=sys.stderr)
     return 0
 
 

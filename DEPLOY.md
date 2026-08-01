@@ -30,7 +30,7 @@ Click **Create repository**.
 Open Terminal (⌘-Space, type `Terminal`) and paste this whole block:
 
 ```bash
-cd ~/Library/CloudStorage/OneDrive-VirginiaTech/Web/pearl-lab-web
+cd ~/Library/CloudStorage/OneDrive-VirginiaTech/Web/pearl-lab-vt.github.io
 git init -b main
 git add .
 git commit -m "Initial PEARL Lab site"

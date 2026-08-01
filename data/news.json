@@ -1,6 +1,6 @@
 {
-  "_comment": "Newest first. Add a new entry at the TOP of `items`. Required: slug, date (YYYY-MM-DD), title, summary. Optional: category, body (HTML), links, image, draft. Items with \"draft\": true are hidden from the site and the feed. Only items dated on or after `feed_since` are published to feed.xml — this stops an auto-poster from dumping the whole backlog onto LinkedIn the day you connect it. This feed starts in 2025; earlier lab history lives on the director's personal page.",
-  "feed_since": "2026-08-01",
+  "_comment": "Newest first. Add a new entry at the TOP of `items`. Required: slug, date (YYYY-MM-DD), title, summary. Optional: category, body (HTML), links, image, draft. Items with \"draft\": true are hidden from the site and the feed. feed.xml carries the most recent `feed_max_items` published items. `feed_since` is normally BLANK; set it to today's date only if you move to a tool that posts automatically, so the archive cannot be dumped to social media at once. Never change a slug after publishing — feed readers use it as the item's identity.",
+  "feed_since": "",
   "items": [
     {
       "slug": "eccv26-diffpro",
@@ -233,5 +233,6 @@
       "summary": "High-resolution vision–language models spend most of their compute on image tokens that carry almost no information. HiRED uses the model's own attention to decide which ones to drop. Presented at the 39th AAAI Conference on Artificial Intelligence in Philadelphia. Congratulations to Hasan Arif and co-authors.",
       "links": []
     }
-  ]
+  ],
+  "feed_max_items": 20
 }
