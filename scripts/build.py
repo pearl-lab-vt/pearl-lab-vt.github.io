@@ -25,7 +25,33 @@ DATA = ROOT / "data"
 
 
 def load(name: str) -> dict:
-    return json.loads((DATA / f"{name}.json").read_text(encoding="utf-8"))
+    """Read a data file, and explain clearly if the JSON is malformed."""
+    path = DATA / f"{name}.json"
+    text = path.read_text(encoding="utf-8")
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError as e:
+        lines = text.splitlines()
+        print(f"\n  data/{name}.json is not valid JSON.", file=sys.stderr)
+        print(f"  {e.msg}, at line {e.lineno}, column {e.colno}\n", file=sys.stderr)
+        for n in range(max(1, e.lineno - 2), min(len(lines), e.lineno + 2) + 1):
+            mark = ">>" if n == e.lineno else "  "
+            print(f"  {mark} {n:4} | {lines[n - 1][:100]}", file=sys.stderr)
+        hints = {
+            "Extra data": "Something sits outside the outermost { }. A new news item "
+                          "belongs INSIDE the \"items\": [ ... ] array, not at the top "
+                          "of the file.",
+            "Expecting ',' delimiter": "A comma is missing between two entries.",
+            "Expecting value": "A trailing comma before ] or }, or an empty slot.",
+            "Expecting property name": "A trailing comma after the last entry in a block.",
+        }
+        for key, hint in hints.items():
+            if e.msg.startswith(key):
+                print(f"\n  Likely cause: {hint}", file=sys.stderr)
+                break
+        print(f"\n  Nothing was changed. Fix data/{name}.json and run this again.",
+              file=sys.stderr)
+        raise SystemExit(1)
 
 
 def strip_tags(s: str) -> str:

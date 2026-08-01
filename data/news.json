@@ -3,6 +3,19 @@
   "feed_since": "",
   "items": [
     {
+      "slug": "pearl-website-launch",
+      "date": "2026-08-01",
+      "category": "news",
+      "title": "PEARL has a website",
+      "summary": "The lab now has a home at pearl-lab-vt.github.io. PEARL works on what AI costs to run: the runtimes, memory systems and schedulers that decide whether a model needs a rack of accelerators or fits on a wearable. The site collects our research, our people and our publications, and it is where lab news will appear first.",
+      "links": [
+        {
+          "label": "pearl-lab-vt.github.io",
+          "url": "https://pearl-lab-vt.github.io"
+        }
+      ]
+    },
+    {
       "slug": "eccv26-diffpro",
       "date": "2026-07-06",
       "category": "papers",
