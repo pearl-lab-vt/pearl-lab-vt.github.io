@@ -1,0 +1,43 @@
+{
+  "_comment": "Sponsor logos. Put the official logo file at the path in `file` (see assets/sponsors/README.md for where to download each one from). If the file is missing, the site falls back to the sponsor's name set in type, so nothing breaks. Set \"hidden\": true to keep an entry in this file without showing it.",
+  "heading": "Our work is supported by",
+  "note": "Any opinions, findings, and conclusions or recommendations expressed on this site are those of the authors and do not necessarily reflect the views of our sponsors.",
+  "items": [
+    {
+      "name": "U.S. National Science Foundation",
+      "short": "NSF",
+      "file": "assets/sponsors/nsf.png",
+      "url": "https://www.nsf.gov",
+      "detail": "SWEET (#2315851); HardLambda (#2106634); National AI Research Resource"
+    },
+    {
+      "name": "U.S. Department of Energy",
+      "short": "DOE",
+      "file": "assets/sponsors/doe-awardee.png",
+      "url": "https://www.energy.gov",
+      "detail": "Early Career Principal Investigator Award (#DE-FG02-06ER25751)"
+    },
+    {
+      "name": "Sony",
+      "short": "Sony",
+      "file": "assets/sponsors/sony.png",
+      "url": "https://www.sony.com",
+      "detail": "SCALE-R (2026); WASML Faculty Innovation Award (2023)"
+    },
+    {
+      "name": "Amazon",
+      "short": "Amazon",
+      "file": "assets/sponsors/amazon.png",
+      "url": "https://www.amazon.science",
+      "detail": "Multi-agent LLM systems (2026)",
+      "hidden": true
+    },
+    {
+      "name": "Virginia Tech College of Engineering",
+      "short": "Virginia Tech College of Engineering",
+      "file": "assets/sponsors/vt-engineering.png",
+      "url": "https://eng.vt.edu",
+      "detail": "Major Grant Initiative Program (2025); ICTAS / Institute for Advanced Computing (2025)"
+    }
+  ]
+}

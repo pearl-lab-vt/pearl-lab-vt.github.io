@@ -1,0 +1,207 @@
+{
+  "note": "Selected lab publications from 2024 onward. The director's complete list, more than 280 refereed papers, is at <a href=\"https://dsniko.github.io/publications/\">dsniko.github.io/publications</a>.",
+  "items": [
+    {
+      "title": "FACT: Compositional Kernel Synthesis with a Three-Stage Agentic Workflow",
+      "authors": "Sina Heidari, Dimitrios S. Nikolopoulos",
+      "venue": "arXiv:2604.26666 [cs.DC]",
+      "year": 2026,
+      "type": "preprint",
+      "topic": "agentic-hpc",
+      "url": "https://arxiv.org/abs/2604.26666"
+    },
+    {
+      "title": "LLM-Guided Runtime Parameter Optimization for Energy-Efficient Model Inference",
+      "authors": "Katelyn Crumpacker, Dimitrios S. Nikolopoulos",
+      "venue": "arXiv:2604.27032 [cs.SE]",
+      "year": 2026,
+      "type": "preprint",
+      "topic": "agentic-hpc",
+      "url": "https://arxiv.org/abs/2604.27032"
+    },
+    {
+      "title": "DiffPro: Joint Timestep and Layer-Wise Precision Optimization for Efficient Diffusion Inference",
+      "authors": "Farhana Amin, Sabrina Afroz, Kanchon Gharami, Mona Moghadampanah, Dimitrios S. Nikolopoulos",
+      "venue": "19th European Conference on Computer Vision (ECCV), Malmö",
+      "year": 2026,
+      "type": "conference",
+      "topic": "llm-serving"
+    },
+    {
+      "title": "Stride-Aware Page Prefetching for GPU Unified Memory via Markov Pattern Prediction",
+      "authors": "Yunqi Shen, Dimitrios S. Nikolopoulos",
+      "venue": "ACM SIGPLAN International Symposium on Memory Management (ISMM), Boulder",
+      "year": 2026,
+      "type": "conference",
+      "topic": "memory"
+    },
+    {
+      "title": "dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving",
+      "authors": "Jiakun Fan, Yiyuan Zhang, Xiangchen Li, Dimitrios S. Nikolopoulos",
+      "venue": "40th ACM International Conference on Supercomputing (ICS), Belfast",
+      "year": 2026,
+      "type": "conference",
+      "topic": "llm-serving"
+    },
+    {
+      "title": "APEX: Asynchronous Parallel CPU-GPU Execution for Online LLM Inference on Constrained GPUs",
+      "authors": "Jiakun Fan, Yiyuan Zhang, Xiangchen Li, Dimitrios S. Nikolopoulos",
+      "venue": "40th IEEE International Parallel and Distributed Processing Symposium (IPDPS), New Orleans",
+      "year": 2026,
+      "type": "conference",
+      "topic": "llm-serving"
+    },
+    {
+      "title": "WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching",
+      "authors": "Xiangchen Li, Jiakun Fan, Qiang Wang, Dimitris Spatharakis, Saeid Ghafouri, Hans Vandierendonck, Deepu John, Bo Ji, Ali R. Butt, Dimitrios S. Nikolopoulos",
+      "venue": "Proceedings of the ACM on Measurement and Analysis of Computing Systems (POMACS / SIGMETRICS)",
+      "year": 2026,
+      "type": "journal",
+      "topic": "edge"
+    },
+    {
+      "title": "SWEET: Serving Workload-Balanced End-to-End Efficient and Tailored Edge Inference via Quantization and Partitioning",
+      "authors": "Xiangchen Li, Saeid Ghafouri, Hans Vandierendonck, Deepu John, Dimitrios S. Nikolopoulos",
+      "venue": "Frontiers in Complex Systems",
+      "year": 2026,
+      "type": "journal",
+      "topic": "edge"
+    },
+    {
+      "title": "Polymorph: Energy-Efficient Multi-Label Classification for Video Streams on Embedded Devices",
+      "authors": "Saeid Ghafouri, Mohsen Fayyaz, Xiangchen Li, Deepu John, Bo Ji, Dimitrios S. Nikolopoulos, Hans Vandierendonck",
+      "venue": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), Tucson",
+      "year": 2026,
+      "type": "conference",
+      "topic": "edge"
+    },
+    {
+      "title": "MARCO: Multi-Agent Code Optimization for High-Performance Computing",
+      "authors": "Ariana Nafisi, Veljko Cvetkovic, Claire Shin, Kathleen Reece, Krishnateja Reddy, Bryan Torres, Sina Heidari, Margaret Ellis, Dimitrios S. Nikolopoulos",
+      "venue": "ACM Capital Region Celebration of Women in Computing (CAPWIC)",
+      "year": 2026,
+      "type": "conference",
+      "topic": "agentic-hpc"
+    },
+    {
+      "title": "ConfigSpec: Profiling-Based Configuration Selection for Distributed Edge–Cloud Speculative LLM Serving",
+      "authors": "Xiangchen Li, Saeid Ghafouri, Jiakun Fan, Hans Vandierendonck, Dimitrios S. Nikolopoulos",
+      "venue": "4th International Workshop on Testing Distributed Internet of Things Systems (TDIS), Edinburgh",
+      "year": 2026,
+      "type": "workshop",
+      "topic": "edge"
+    },
+    {
+      "title": "Modality Inflation: Energy Characterization and Optimization Opportunities for MLLM Inference",
+      "authors": "Mona Moghadampanah, Adib Rezaei Shahmirzadi, Farhana Amin, Dimitrios S. Nikolopoulos",
+      "venue": "21st International Workshop on Automatic Performance Tuning (iWAPT), New Orleans",
+      "year": 2026,
+      "type": "workshop",
+      "topic": "resilience"
+    },
+    {
+      "title": "SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving",
+      "authors": "Xiangchen Li, Dimitris Spatharakis, Saeid Ghafouri, Jiakun Fan, Hans Vandierendonck, Deepu John, Bo Ji, Dimitrios S. Nikolopoulos",
+      "venue": "10th ACM/IEEE Symposium on Edge Computing (SEC), Washington, D.C.",
+      "year": 2025,
+      "type": "conference",
+      "topic": "edge"
+    },
+    {
+      "title": "HiRED: Attention-Guided Token Dropping for Efficient Inference of High-Resolution Vision-Language Models in Resource-Constrained Environments",
+      "authors": "Kazi Hasan Ibn Arif, JinYi Yoon, Dimitrios S. Nikolopoulos, Hans Vandierendonck, Deepu John, Bo Ji",
+      "venue": "39th AAAI Conference on Artificial Intelligence, Philadelphia",
+      "year": 2025,
+      "type": "conference",
+      "topic": "llm-serving"
+    },
+    {
+      "title": "Memory Tiering in the Python Virtual Machine",
+      "authors": "Yuze Li, Shunyu Yao, Jaiaid Mobin, Tianyi Zhan, M. Mustafa Rafique, Dimitrios S. Nikolopoulos, Kirshanthan Sundararajah, Ali R. Butt",
+      "venue": "17th SPLASH Workshop on Virtual Machines and Language Implementations (VMIL), Singapore",
+      "year": 2025,
+      "type": "workshop",
+      "topic": "memory"
+    },
+    {
+      "title": "MARVEL: An End-to-End Framework for Generating Model-Class Aware Custom RISC-V Extensions for Lightweight AI",
+      "authors": "Aditya Kumar, Cathal O'Mahoney, Pedro Kreutz Werle, Shashwat Shanker, Dimitrios S. Nikolopoulos, Bo Ji, Hans Vandierendonck, Deepu John",
+      "venue": "IEEE Open Journal of Circuits and Systems, vol. 6",
+      "year": 2025,
+      "type": "journal",
+      "topic": "edge"
+    },
+    {
+      "title": "HydraCache: Long-Context Prefill Parallelization via Distributed Cache Blending",
+      "authors": "Adib Rezaei Shahmirzadi, Sadegh Shabihi, Feiyang Huang, Dimitrios S. Nikolopoulos",
+      "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis, Poster, St. Louis",
+      "year": 2025,
+      "type": "poster",
+      "topic": "llm-serving"
+    },
+    {
+      "title": "Divide, Conquer, and Denoise: Hybrid Parallel Diffusion with Memory-Aware Coarse-to-Fine Inference",
+      "authors": "Farhana Amin, Kanchon Gharami, Dimitrios S. Nikolopoulos",
+      "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis, Poster, St. Louis",
+      "year": 2025,
+      "type": "poster",
+      "topic": "llm-serving"
+    },
+    {
+      "title": "Energy-Efficient Multimodal LLM Inference: Stage-Level Characterization and Input-Aware Controls",
+      "authors": "Mona Moghadampanah, Adib Rezaei Shahmirzadi, Dimitrios S. Nikolopoulos",
+      "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis, Poster, St. Louis",
+      "year": 2025,
+      "type": "poster",
+      "topic": "resilience"
+    },
+    {
+      "title": "ParvaGPU: Efficient Spatial GPU Sharing for Large-Scale DNN Inference in Cloud Environments",
+      "authors": "Munkyu Lee, Sihoon Seong, Minki Kang, Jihyuk Lee, Gap-Joo Na, In-Geol Chun, Dimitrios S. Nikolopoulos, Cheol-Ho Hong",
+      "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis",
+      "year": 2024,
+      "type": "conference",
+      "topic": "memory"
+    },
+    {
+      "title": "Application-Attuned Memory Management for Containerized HPC Workflows",
+      "authors": "Moiz Arif, Avinash Maurya, M. Mustafa Rafique, Dimitrios S. Nikolopoulos, Ali R. Butt",
+      "venue": "38th IEEE International Parallel and Distributed Processing Symposium (IPDPS), San Francisco",
+      "year": 2024,
+      "type": "conference",
+      "topic": "memory"
+    },
+    {
+      "title": "FrameFeedback: A Closed-Loop Control System for Dynamic Offloading of Real-Time Edge Inference",
+      "authors": "Matthew Jackson, Bo Ji, Dimitrios S. Nikolopoulos",
+      "venue": "IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)",
+      "year": 2024,
+      "type": "workshop",
+      "topic": "edge"
+    },
+    {
+      "title": "On Robust Optimal Joint Deployment and Assignment of RAN Intelligent Controllers in O-RANs",
+      "authors": "Mohammad J. Abdel-Rahman, Emadeldin Abdrabou, Fadi Hassan, Kevin Teague, Allen B. MacKenzie, Scott F. Midkiff, Kleber V. Cardoso, Dimitrios S. Nikolopoulos",
+      "venue": "IEEE Open Journal of the Communications Society, vol. 5",
+      "year": 2024,
+      "type": "journal",
+      "topic": "edge"
+    },
+    {
+      "title": "Parallel Islands: A Parallel Computing Educational Video Game",
+      "authors": "Melissa Cameron, Margaret Ellis, Dimitrios S. Nikolopoulos",
+      "venue": "ACM Technical Symposium on Computer Science Education (SIGCSE TS)",
+      "year": 2024,
+      "type": "conference",
+      "topic": "agentic-hpc"
+    },
+    {
+      "title": "Towards an Efficient Python Interpreter for Tiered Memory Systems",
+      "authors": "Yuze Li, Shunyu Yao, Jaiaid Mobin, M. Mustafa Rafique, Dimitrios S. Nikolopoulos, Kirshanthan Sundararajah, Huaicheng Li, Ali R. Butt",
+      "venue": "22nd USENIX Conference on File and Storage Technologies (FAST), Work in Progress",
+      "year": 2024,
+      "type": "workshop",
+      "topic": "memory"
+    }
+  ]
+}

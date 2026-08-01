@@ -1,0 +1,37 @@
+{
+  "name": "PEARL",
+  "tagline": "Performance Engineering for Accelerators, Runtimes and Learning",
+  "url": "https://pearl-lab-vt.github.io",
+  "institution": "Virginia Tech",
+  "description": "PEARL builds the systems software that brings demanding AI within reach of the hardware people already have, from wearables and edge devices to warehouse-scale machines.",
+  "director": {
+    "name": "Dimitrios S. Nikolopoulos",
+    "title": "John W. Hancock Jr. Professor of Engineering",
+    "url": "https://dsniko.github.io",
+    "email": "dsn@vt.edu"
+  },
+  "departments": [
+    {
+      "name": "Department of Computer Science",
+      "url": "https://www.cs.vt.edu"
+    },
+    {
+      "name": "Bradley Department of Electrical and Computer Engineering",
+      "url": "https://ece.vt.edu"
+    }
+  ],
+  "links": {
+    "linkedin": "https://www.linkedin.com/company/104703591/",
+    "github": "https://github.com/pearl-lab-vt",
+    "scholar": "https://scholar.google.com/citations?user=aC8ZsGoAAAAJ",
+    "email": "dsn@vt.edu"
+  },
+  "location": "Blacksburg, Virginia, USA",
+  "acronym": {
+    "P": "Performance",
+    "E": "Engineering",
+    "A": "Accelerators",
+    "R": "Runtimes",
+    "L": "Learning"
+  }
+}

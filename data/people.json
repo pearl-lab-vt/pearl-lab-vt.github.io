@@ -1,0 +1,495 @@
+{
+  "groups": [
+    {
+      "id": "director",
+      "title": "Director",
+      "members": [
+        {
+          "name": "Dimitrios S. Nikolopoulos",
+          "role": "John W. Hancock Jr. Professor of Engineering",
+          "affiliation": "Computer Science, Virginia Tech",
+          "url": "https://dsniko.github.io",
+          "email": "dsn@vt.edu"
+        }
+      ]
+    },
+    {
+      "id": "phd",
+      "title": "Ph.D. Researchers",
+      "note": "Seven advised directly, two co-advised.",
+      "members": [
+        {
+          "name": "Xiangchen Li",
+          "role": "Ph.D. Researcher",
+          "affiliation": "Electrical and Computer Engineering, Virginia Tech",
+          "topic": "Edge LLM serving, speculative decoding, model partitioning and quantization",
+          "expected": "2027",
+          "url": "https://www.linkedin.com/in/xiangchen-li-aba77825b/"
+        },
+        {
+          "name": "Shunyu Yao",
+          "role": "Ph.D. Researcher",
+          "affiliation": "Computer Science, Virginia Tech",
+          "topic": "Tiered memory systems and language virtual machines",
+          "expected": "2026",
+          "note": "Co-advised with Ali R. Butt",
+          "url": "https://www.linkedin.com/in/shunyu-yao-3b6a53189/"
+        },
+        {
+          "name": "Hasan Arif",
+          "role": "Ph.D. Researcher",
+          "affiliation": "Computer Science, Virginia Tech",
+          "topic": "Efficient inference for high-resolution vision–language models",
+          "expected": "2028",
+          "note": "Co-advised with Bo Ji",
+          "url": "https://www.linkedin.com/in/hasan-arif-8b78a61a3/"
+        },
+        {
+          "name": "Jiakun Fan",
+          "role": "Ph.D. Researcher",
+          "affiliation": "Computer Science, Virginia Tech",
+          "topic": "LLM and diffusion model serving on constrained GPUs",
+          "expected": "2029",
+          "url": "https://www.linkedin.com/in/jiakun-fan-6a748828a/"
+        },
+        {
+          "name": "Yunqi Shen",
+          "role": "Ph.D. Researcher",
+          "affiliation": "Computer Science, Virginia Tech",
+          "topic": "GPU unified memory, page prefetching and migration",
+          "expected": "2029",
+          "url": "https://www.linkedin.com/in/yunqi-shen-7a0859323/"
+        },
+        {
+          "name": "Farhana Amin",
+          "role": "Ph.D. Researcher",
+          "affiliation": "Computer Science, Virginia Tech",
+          "topic": "Efficient diffusion inference and mixed-precision optimization",
+          "expected": "2029",
+          "url": "https://www.linkedin.com/in/farhana-amin-0223b0172/"
+        },
+        {
+          "name": "Mona Moghadampanah",
+          "role": "Ph.D. Researcher",
+          "affiliation": "Computer Science, Virginia Tech",
+          "topic": "Energy characterization and control for multimodal LLM inference",
+          "expected": "2029",
+          "url": "https://www.linkedin.com/in/mona-mp/"
+        },
+        {
+          "name": "Adib Rezaei Shahmirzadi",
+          "role": "Ph.D. Researcher",
+          "affiliation": "Computer Science, Virginia Tech",
+          "topic": "Long-context prefill parallelization and distributed KV-cache",
+          "expected": "2029",
+          "url": "https://www.linkedin.com/in/adib-rezaei/"
+        },
+        {
+          "name": "Sina Heidari",
+          "role": "Ph.D. Researcher",
+          "affiliation": "Computer Science, Virginia Tech",
+          "topic": "Agentic AI for HPC code optimization",
+          "expected": "2029",
+          "url": ""
+        }
+      ]
+    }
+  ],
+  "alumni": [
+    {
+      "name": "Mary (Katelyn) Crumpacker",
+      "degree": "M.Sc.",
+      "year": 2026,
+      "thesis": "LLM-Guided Runtime Parameter Optimization for Energy-Efficient Model Inference",
+      "url": "https://www.linkedin.com/in/mkcrumpacker/"
+    },
+    {
+      "name": "Yuze Li",
+      "degree": "Ph.D.",
+      "year": 2026,
+      "thesis": "Cross-stack Improvement on Memory Efficiency",
+      "url": "https://www.linkedin.com/in/yuzeli343/"
+    },
+    {
+      "name": "Adarsh Chittimoori",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Aidan Walters",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Aneesh Tummeti",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Ariana Nafisi",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Asif Rahman",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Bryan Torres",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Claire Shin",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Denise Cooney",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Dimitris Spatharakis",
+      "degree": "Postdoc",
+      "year": 2025,
+      "next": "Postdoctoral Researcher, National Technical University of Athens",
+      "url": "https://www.linkedin.com/in/dimitris-spatharakis-b19529185/"
+    },
+    {
+      "name": "Emadeldin Abdrabou",
+      "degree": "Ph.D.",
+      "year": 2025,
+      "thesis": "On the Optimization of Edge Server Scaling and Placement for Open Radio Access Network (O-RAN) Slicing",
+      "next": "Assistant Professor, Sohag University",
+      "url": "https://www.linkedin.com/in/emadeldin-mazied-abdrabou-115b19120/"
+    },
+    {
+      "name": "Kathleen Reece",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Kayden Moraes",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Krishnateja Reddy",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Max Fisher",
+      "degree": "M.Sc.",
+      "year": 2025,
+      "thesis": "Analysis of Memory Access Patterns and Pre-Fetching Strategies for Large Language Model Inferencing",
+      "next": "Software Engineer, Bloomberg",
+      "url": "https://www.linkedin.com/in/mhfisher/"
+    },
+    {
+      "name": "Timothy Coyne",
+      "degree": "M.Sc.",
+      "year": 2025,
+      "thesis": "Performance Portability of CUDA Across NVIDIA GPU Architectures",
+      "next": "Software Engineer, Bloomberg",
+      "url": "https://www.linkedin.com/in/timothy-coyne-556539295/"
+    },
+    {
+      "name": "Veljko Cvetkovic",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Yasir Hasan",
+      "degree": "B.Sc.",
+      "year": 2025,
+      "topic": "Agentic AI for HPC Code Optimization"
+    },
+    {
+      "name": "Alex Lin",
+      "degree": "B.Sc.",
+      "year": 2023,
+      "next": "Software Engineer, Bloomberg",
+      "url": "https://www.linkedin.com/in/alxn3/",
+      "topic": "Supporting GPUs in WebAssembly"
+    },
+    {
+      "name": "Angel Gonzalez",
+      "degree": "B.Sc.",
+      "year": 2023,
+      "next": "Algorithmic Trading Intern, FinSentinal",
+      "url": "https://www.linkedin.com/in/ap2024/",
+      "topic": "RISC-V Cache Simulators"
+    },
+    {
+      "name": "Anthony Nguyen",
+      "degree": "B.Sc.",
+      "year": 2023,
+      "next": "Capital One Software Engineer",
+      "url": "https://www.linkedin.com/in/ant33nguyen/",
+      "topic": "WebAssembly Performance Profiling"
+    },
+    {
+      "name": "Gianfranco Vivanco",
+      "degree": "B.Sc.",
+      "year": 2023,
+      "topic": "Performance Characterization of LLM Inference"
+    },
+    {
+      "name": "Ishaan Gulati",
+      "degree": "M.Sc.",
+      "year": 2023,
+      "thesis": "A Scalable Leader-Based Consensus Algorithm",
+      "next": "Senior Machine Learning Engineer, Visa",
+      "url": "https://www.linkedin.com/in/ishaan-gulati-139789217/"
+    },
+    {
+      "name": "Jack Williamson",
+      "degree": "B.Sc.",
+      "year": 2023,
+      "next": "Capital One Software Engineer",
+      "url": "https://www.linkedin.com/in/jack-williamson1/",
+      "topic": "Supporting flexible SIMD ISAs in WebAssembly"
+    },
+    {
+      "name": "Jamie Whiting",
+      "degree": "B.Sc.",
+      "year": 2023,
+      "next": "Infrastructure Engineer, EPIC Systems",
+      "url": "https://www.linkedin.com/in/jamie-whiting/",
+      "topic": "RISC-V Simulation and System Software"
+    },
+    {
+      "name": "Manthan Shah",
+      "degree": "M.Sc.",
+      "year": 2023,
+      "thesis": "Analysis of YOLOv7 Inference Performance through a Systems Perspective and the identification of optimization opportunities",
+      "next": "Mobile Robotics Engineer, Addverb",
+      "url": "https://www.linkedin.com/in/nalostta/"
+    },
+    {
+      "name": "Matthew Jackson",
+      "degree": "M.Sc.",
+      "year": 2023,
+      "thesis": "Computational Offloading for Real-Time Computer Vision in Unreliable Multi-Tenant Edge Systems",
+      "url": "https://www.linkedin.com/in/matthew-jackson-a526541b7/"
+    },
+    {
+      "name": "Melissa Cameron",
+      "degree": "M.Sc.",
+      "year": 2023,
+      "thesis": "Parallel Islands: A Diversity Aware Tool For Parallel Computing Education",
+      "next": "Collegiate Assistant Professor, Virginia Tech",
+      "url": "https://www.linkedin.com/in/melissa-cameron-b20012332/"
+    },
+    {
+      "name": "Moustafa Kahla",
+      "degree": "M.Sc.",
+      "year": 2023,
+      "thesis": "Automatic Source Code Transformation To Pass Compiler Optimization",
+      "next": "Software Engineer at VIAVI",
+      "url": "https://www.linkedin.com/in/m-kahla/"
+    },
+    {
+      "name": "Riyos Pudasaini",
+      "degree": "B.Sc.",
+      "year": 2023,
+      "next": "Masters Student, Virginia Tech",
+      "url": "https://www.linkedin.com/in/riyos-pudasaini-25b753368/",
+      "topic": "Scalable Memory Allocators for Rust"
+    },
+    {
+      "name": "Shreya Bhandare",
+      "degree": "M.Sc.",
+      "year": 2023,
+      "thesis": "Designing RDMA-based Efficient Communication for GPU Remoting.",
+      "next": "Software Engineer, Microsoft",
+      "url": "https://www.linkedin.com/in/shrebhan/"
+    },
+    {
+      "name": "Tatiana Monteiro",
+      "degree": "B.Sc.",
+      "year": 2023,
+      "topic": "Optimization of Inference from Decision Trees"
+    },
+    {
+      "name": "Aditya Iyer",
+      "degree": "B.Sc.",
+      "year": 2022,
+      "topic": "FaaS Workload Characterization"
+    },
+    {
+      "name": "Kieran Siek",
+      "degree": "B.Sc.",
+      "year": 2022,
+      "next": "Graduate Teaching Assistant at Virginia Tech",
+      "url": "https://www.linkedin.com/in/kieransiek/",
+      "topic": "Code Generation for Matrix ISA Extensions"
+    },
+    {
+      "name": "Daniel Moyer",
+      "degree": "M.Sc.",
+      "year": 2021,
+      "thesis": "Punching Holes in the Cloud: Direct Communication between Serverless Functions using NAT Traversal",
+      "next": "Software Engineer, AWS"
+    },
+    {
+      "name": "Lalitha Kupa",
+      "degree": "B.Sc.",
+      "year": 2021,
+      "next": "Software Engineer at LinkedIn",
+      "url": "https://www.linkedin.com/in/lkuppa/",
+      "topic": "NUMA Persistent Memory Management in the Operating System"
+    },
+    {
+      "name": "Parker Harnack",
+      "degree": "B.Sc.",
+      "year": 2021,
+      "next": "Senior Associate Software Engineer at Capital One",
+      "url": "https://www.linkedin.com/in/parker-harnack-070503195/",
+      "topic": "Performance Analysis of Persistent Memory Allocators"
+    },
+    {
+      "name": "Ishaan Singh",
+      "degree": "B.Sc.",
+      "year": 2020,
+      "next": "Software Engineer II at Amazon",
+      "url": "https://www.linkedin.com/in/ishaan-singh-6404b0153/",
+      "topic": "Container Caching"
+    },
+    {
+      "name": "Aleksandr Khasymski",
+      "degree": "Ph.D.",
+      "year": 2015,
+      "thesis": "Accelerated Storage Systems",
+      "next": "Senior Storage Engineer, NetApp",
+      "url": "https://www.linkedin.com/in/aleksandr-khasymski-15b1a819/"
+    },
+    {
+      "name": "Chun-Yi Su",
+      "degree": "Ph.D.",
+      "year": 2014,
+      "thesis": "Energy-Aware Thread and Data Management in Heterogeneous Multi-Core and Multi-Memory Systems",
+      "next": "Founder, AlphaProfitable",
+      "url": "https://www.linkedin.com/in/chunyisu/"
+    },
+    {
+      "name": "Jae-Seung Yeom",
+      "degree": "Ph.D.",
+      "year": 2014,
+      "thesis": "Optimizing Data Accesses for Scaling Data-Intensive Scientific Applications",
+      "next": "Computer Scientist at Lawrence Livermore National Laboratory",
+      "url": "https://people.llnl.gov/yeom2"
+    },
+    {
+      "name": "M. Mustafa Rafique",
+      "degree": "Ph.D.",
+      "year": 2011,
+      "thesis": "An Adaptive Framework for Managing Heterogeneous Multi-core Clusters",
+      "next": "Associate Professor, Rochester Institute of Technology",
+      "url": "https://cs.rit.edu/~mrafique/"
+    },
+    {
+      "name": "Dong Li",
+      "degree": "Ph.D.",
+      "year": 2010,
+      "thesis": "Scalable and Energy Efficient Execution Methods for Multi-core Systems",
+      "next": "Associate Professor, University of California, Merced",
+      "url": "https://faculty.ucmerced.edu/dong-li/"
+    },
+    {
+      "name": "John Christian Linford",
+      "degree": "Ph.D.",
+      "year": 2010,
+      "thesis": "Accelerated Atmospheric Modeling through Emerging Multi-Core Technologies",
+      "next": "Head of Product, CAE/EDA, NVIDIA",
+      "url": "https://www.linkedin.com/in/jlinford/"
+    },
+    {
+      "name": "Scott Schneider",
+      "degree": "Ph.D.",
+      "year": 2010,
+      "thesis": "Shared Memory Abstractions for Heterogeneous Multicore Processors",
+      "next": "Software Engineer, AI Infrastructure, Meta",
+      "url": "https://www.scott-a-s.com/"
+    },
+    {
+      "name": "Benjamin Rose",
+      "degree": "M.Sc.",
+      "year": 2009,
+      "thesis": "Intra- and Inter-Chip Communication Support for Asymmetric Multicore Processors with Explicitly Managed Memory Hierarchies",
+      "next": "Technical Leader at Cisco Systems",
+      "url": "https://www.linkedin.com/in/bar234/"
+    },
+    {
+      "name": "Ankur Shah",
+      "degree": "M.Sc.",
+      "year": 2008,
+      "thesis": "Prediction Models for Multi-dimensional Power-Performance Optimization on Many Cores",
+      "next": "Partner Engineering Manager at Microsoft"
+    },
+    {
+      "name": "Beran Nova Bryant",
+      "degree": "M.Sc.",
+      "year": 2008,
+      "thesis": "Temperature-Aware Scheduling of Parallel Applications on Shared-Memory Multiprocessors",
+      "next": "CEO at Sunfire Solutions",
+      "url": "https://www.linkedin.com/in/beran-nova-bryant/"
+    },
+    {
+      "name": "Filip Blagojevic",
+      "degree": "Ph.D.",
+      "year": 2008,
+      "thesis": "Scheduling on Asymmetric Parallel Architectures",
+      "next": "Research Scientist at Western Digital",
+      "url": "https://www.linkedin.com/in/filip-blagojevic-12312919/"
+    },
+    {
+      "name": "Harshil Shah",
+      "degree": "M.Sc.",
+      "year": 2008,
+      "thesis": "Application Parallelization on the Cell/BE",
+      "next": "Engineer at Collective",
+      "url": "https://www.linkedin.com/in/harshil-shah-90427237/"
+    },
+    {
+      "name": "Jyotirmaya Tripathi",
+      "degree": "M.Sc.",
+      "year": 2008,
+      "thesis": "Scheduling Parallel Applications on Paravirtualized Shared-Memory Multiprocessors",
+      "next": "Senior Software Development Manager, Amazon Web Services",
+      "url": "https://www.linkedin.com/in/jyotirmayatripathi/"
+    },
+    {
+      "name": "Matthew Curtis-Maury",
+      "degree": "Ph.D.",
+      "year": 2008,
+      "thesis": "Improving the Efficiency of Parallel Applications on Multithreaded and Multicore Systems",
+      "next": "Principal Software Engineer at NetApp",
+      "url": "https://www.linkedin.com/in/matthew-curtis-maury-70409a20/"
+    },
+    {
+      "name": "Patrick Fiaux",
+      "degree": "B.Sc.",
+      "year": 2007,
+      "next": "Staff Engineer at Open Systems",
+      "url": "https://www.linkedin.com/in/patrickfiaux/",
+      "topic": "Application Parallelization and Optimization on Cell/BE"
+    }
+  ],
+  "alumni_note": "This list covers PEARL members at Virginia Tech. Mentees from Queen's University Belfast, the University of Crete and the College of William &amp; Mary are recorded on the director's <a href=\"https://dsniko.github.io/mentees/\">personal page</a>."
+}

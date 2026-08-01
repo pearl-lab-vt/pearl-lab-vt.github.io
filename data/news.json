@@ -1,0 +1,237 @@
+{
+  "_comment": "Newest first. Add a new entry at the TOP of `items`. Required: slug, date (YYYY-MM-DD), title, summary. Optional: category, body (HTML), links, image, draft. Items with \"draft\": true are hidden from the site and the feed. Only items dated on or after `feed_since` are published to feed.xml — this stops an auto-poster from dumping the whole backlog onto LinkedIn the day you connect it. This feed starts in 2025; earlier lab history lives on the director's personal page.",
+  "feed_since": "2026-08-01",
+  "items": [
+    {
+      "slug": "eccv26-diffpro",
+      "date": "2026-07-06",
+      "category": "papers",
+      "title": "DiffPro accepted at ECCV 2026",
+      "summary": "DiffPro sets numerical precision jointly across diffusion timesteps and network layers rather than fixing it once for the whole model. The paper appears at the European Conference on Computer Vision in Malmö this September. Congratulations to Farhana Amin, Sabrina Afroz, Kanchon Gharami and Mona Moghadampanah.",
+      "body": "<p>The work grew out of the SC'25 posters on hybrid parallel diffusion and memory-aware coarse-to-fine inference.</p>",
+      "links": []
+    },
+    {
+      "slug": "ismm26-gpu-prefetching",
+      "date": "2026-06-16",
+      "category": "papers",
+      "title": "Stride-aware GPU page prefetching presented at ISMM 2026",
+      "summary": "Unified memory makes GPUs easier to program and slower to run. Yunqi Shen presented our recovery of that lost performance at the ACM SIGPLAN International Symposium on Memory Management in Boulder: a prefetcher that predicts access patterns with a Markov model instead of reacting to page faults once the stall has already happened.",
+      "links": []
+    },
+    {
+      "slug": "yuze-li-phd",
+      "date": "2026-05-15",
+      "category": "people",
+      "title": "Yuze Li defends his Ph.D.",
+      "summary": "Congratulations to Dr. Yuze Li, who defended his dissertation on cross-stack improvement of memory efficiency, co-advised with Ali R. Butt. The work runs from the language virtual machine down through tiered memory to the operating system, and each layer needed the others to make sense.",
+      "links": []
+    },
+    {
+      "slug": "katelyn-crumpacker-msc",
+      "date": "2026-05-15",
+      "category": "people",
+      "title": "Katelyn Crumpacker defends her M.Sc. thesis",
+      "summary": "Congratulations to Katelyn Crumpacker on defending her M.Sc. thesis, \"LLM-Guided Runtime Parameter Optimization for Energy-Efficient Model Inference.\" The runtime knobs that decide what inference costs in energy are numerous, interacting, and rarely tuned. Her work uses a language model to search that space.",
+      "links": []
+    },
+    {
+      "slug": "sony-scale-r",
+      "date": "2026-05-04",
+      "category": "grants",
+      "title": "Sony Faculty Innovation Award for SCALE-R",
+      "summary": "Sony has funded SCALE-R, on semantic co-rendering and adaptive link-aware encoding for real-time graphics. The award runs to May 2027 and continues a collaboration on efficient inference and media pipelines at the edge that began with WASML, our 2023 Sony Faculty Innovation Award on scalable serverless computer vision.",
+      "links": []
+    },
+    {
+      "slug": "fact-preprint",
+      "date": "2026-04-29",
+      "category": "papers",
+      "title": "FACT: agentic kernel synthesis, grounded in CUTLASS",
+      "summary": "Ask a language model for a fast CUDA kernel and it will hand back plausible code that often does not compile, let alone run quickly. FACT grounds the synthesis in CUTLASS C++ across a three-stage agentic workflow. Auto-tuned kernels beat PyTorch cuBLAS by 1.06x to 1.18x on GEMM workloads, and composing fused multi-head attention with a fused MLP GEMM+GELU reaches a 2.79x end-to-end speedup on a MiniGPT block. Preprint by Sina Heidari.",
+      "links": [
+        {
+          "label": "arXiv:2604.26666",
+          "url": "https://arxiv.org/abs/2604.26666"
+        }
+      ]
+    },
+    {
+      "slug": "llm-runtime-params-preprint",
+      "date": "2026-04-29",
+      "category": "papers",
+      "title": "Letting a language model tune the energy knobs",
+      "summary": "The runtime parameters that decide what inference costs in energy are numerous and they interact, so in practice nobody tunes them by hand. Katelyn Crumpacker's framework puts a chat-based LLM in the loop with structured feedback prompts. The enhanced prompt template converges in 3.4 prompts on average against 5.2 for the baseline, beats Sobol sampling on convergence speed, and reaches lower final energy per token across hardware setups.",
+      "links": [
+        {
+          "label": "arXiv:2604.27032",
+          "url": "https://arxiv.org/abs/2604.27032"
+        }
+      ]
+    },
+    {
+      "slug": "ics26-dllm-serve",
+      "date": "2026-04-28",
+      "category": "papers",
+      "title": "dLLM-Serve accepted at ICS 2026",
+      "summary": "Diffusion language models generate text by iterative refinement, and the memory traffic that requires has kept them out of production serving. dLLM-Serve closes that gap. The paper appears at the 40th ACM International Conference on Supercomputing in Belfast. Congratulations to Jiakun Fan, Yiyuan Zhang and Xiangchen Li.",
+      "links": []
+    },
+    {
+      "slug": "sweet-frontiers-2026",
+      "date": "2026-04-15",
+      "category": "papers",
+      "title": "SWEET published in Frontiers in Complex Systems",
+      "summary": "SWEET partitions and quantizes a model across devices so that no stage of an edge inference pipeline becomes the bottleneck for the rest. The journal version appears in Frontiers in Complex Systems, closing a major thread of the NSF SWEET project with Hans Vandierendonck and Deepu John.",
+      "links": []
+    },
+    {
+      "slug": "sigmetrics26-wisp",
+      "date": "2026-03-25",
+      "category": "papers",
+      "title": "WISP accepted at ACM SIGMETRICS",
+      "summary": "Speculative decoding wastes work whenever the draft model guesses wrong, and at the edge that waste competes with the very requests it was meant to accelerate. WISP suppresses both through dynamic drafting and SLO-aware batching. The paper appears in Proceedings of the ACM on Measurement and Analysis of Computing Systems, led by Xiangchen Li and Jiakun Fan with collaborators at Queen's University Belfast, University College Dublin and Virginia Tech.",
+      "links": []
+    },
+    {
+      "slug": "capwic26-marco",
+      "date": "2026-03-14",
+      "category": "papers",
+      "title": "MARCO presented at CAPWIC 2026",
+      "summary": "MARCO puts several coordinated agents to work optimizing high-performance code, and was presented at the ACM Capital Region Celebration of Women in Computing. The paper comes from our undergraduate research cohort working with Sina Heidari and Margaret Ellis, and is the first published result of the lab's agentic-AI-for-HPC effort.",
+      "body": "<p>Authors: Ariana Nafisi, Veljko Cvetkovic, Claire Shin, Kathleen Reece, Krishnateja Reddy, Bryan Torres, Sina Heidari, Margaret Ellis and Dimitrios S. Nikolopoulos.</p>",
+      "links": []
+    },
+    {
+      "slug": "iwapt26-modality-inflation",
+      "date": "2026-03-02",
+      "category": "papers",
+      "title": "Modality inflation paper accepted at iWAPT 2026",
+      "summary": "Adding a second modality to a language model inflates its energy cost far beyond the extra tokens involved. Mona Moghadampanah, Adib Rezaei Shahmirzadi and Farhana Amin measure where that cost comes from and where it can be recovered. To appear at the 21st International Workshop on Automatic Performance Tuning in New Orleans.",
+      "links": []
+    },
+    {
+      "slug": "ipdps26-apex",
+      "date": "2026-02-20",
+      "category": "papers",
+      "title": "APEX accepted at IPDPS 2026",
+      "summary": "APEX runs online LLM inference on GPUs too small to hold the model, overlapping CPU and GPU execution so neither waits on the other. The paper appears at the 40th IEEE International Parallel and Distributed Processing Symposium in New Orleans. Congratulations to Jiakun Fan, Yiyuan Zhang and Xiangchen Li.",
+      "links": []
+    },
+    {
+      "slug": "wacv26-polymorph",
+      "date": "2026-02-10",
+      "category": "papers",
+      "title": "Polymorph presented at WACV 2026",
+      "summary": "Polymorph performs multi-label classification on video streams within an embedded power budget, presented at the IEEE/CVF Winter Conference on Applications of Computer Vision in Tucson. Joint work with Saeid Ghafouri, Mohsen Fayyaz, Xiangchen Li, Deepu John, Bo Ji and Hans Vandierendonck.",
+      "links": []
+    },
+    {
+      "slug": "tdis26-configspec",
+      "date": "2026-01-26",
+      "category": "papers",
+      "title": "ConfigSpec accepted at TDIS 2026",
+      "summary": "Distributed speculative serving offers more configurations than anyone can tune by hand: which draft model, which split across edge and cloud, which batching policy. ConfigSpec selects among them from profiles. To appear at the 4th International Workshop on Testing Distributed Internet of Things Systems in Edinburgh.",
+      "links": []
+    },
+    {
+      "slug": "emad-abdrabou-phd",
+      "date": "2025-12-15",
+      "category": "people",
+      "title": "Emadeldin Abdrabou defends his Ph.D.",
+      "summary": "Congratulations to Dr. Emadeldin Abdrabou, who defended his dissertation on optimizing edge server scaling and placement for Open Radio Access Network slicing, co-advised with Scott Midkiff. He has taken up a position as Assistant Professor at Sohag University.",
+      "links": []
+    },
+    {
+      "slug": "sec25-sled",
+      "date": "2025-12-04",
+      "category": "papers",
+      "title": "SLED presented at ACM/IEEE Symposium on Edge Computing",
+      "summary": "SLED brings speculative decoding to edge serving, where the draft model and the target model may sit on different machines with a slow link between them. Presented at the Tenth ACM/IEEE Symposium on Edge Computing in Washington, D.C., led by Xiangchen Li with Dimitris Spatharakis, Saeid Ghafouri and Jiakun Fan, and collaborators at Queen's University Belfast and University College Dublin.",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1145/3769102.3770608"
+        }
+      ]
+    },
+    {
+      "slug": "sc25-posters",
+      "date": "2025-11-18",
+      "category": "papers",
+      "title": "Four PEARL posters at SC'25",
+      "summary": "The lab presented four posters at SC'25 in St. Louis, covering long-context prefill parallelization, hybrid parallel diffusion, precision optimization for diffusion inference, and energy characterization of multimodal LLM inference. A strong showing from a first-year Ph.D. cohort.",
+      "body": "<ul><li><strong>HydraCache: Long-Context Prefill Parallelization via Distributed Cache Blending</strong> — Adib Rezaei Shahmirzadi, Sadegh Shabihi, Feiyang Huang</li><li><strong>Divide, Conquer, and Denoise: Hybrid Parallel Diffusion with Memory-Aware Coarse-to-Fine Inference</strong> — Farhana Amin, Kanchon Gharami</li><li><strong>DiffPro: Joint Timestep and Layer-Wise Precision Optimization for Efficient Diffusion Inference</strong> — Farhana Amin, Kanchon Gharami</li><li><strong>Energy-Efficient Multimodal LLM Inference: Stage-Level Characterization and Input-Aware Controls</strong> — Mona Moghadampanah, Adib Rezaei Shahmirzadi</li></ul>",
+      "links": []
+    },
+    {
+      "slug": "vmil25-memory-tiering",
+      "date": "2025-10-14",
+      "category": "papers",
+      "title": "Memory tiering in the Python virtual machine at SPLASH VMIL",
+      "summary": "Python programs place data across memory tiers badly, because the interpreter knows what objects mean while the operating system knows where the pages are, and neither tells the other. Our work on memory tiering inside the virtual machine appeared at the 17th SPLASH Workshop on Virtual Machines and Language Implementations in Singapore. Congratulations to Yuze Li, Shunyu Yao and co-authors.",
+      "links": [
+        {
+          "label": "DOI",
+          "url": "https://doi.org/10.1145/3759548.3763372"
+        }
+      ]
+    },
+    {
+      "slug": "ictas-neuromorphic",
+      "date": "2025-10-06",
+      "category": "grants",
+      "title": "ICTAS award on cloud–edge–neuromorphic integration",
+      "summary": "A new award from the Virginia Tech Institute for Critical Technology and Applied Science and the Institute for Advanced Computing supports work on integrating cloud, edge and neuromorphic computing for multimodal sensing and AI-driven modeling of complex biological systems.",
+      "links": []
+    },
+    {
+      "slug": "turbulent-flows-grant",
+      "date": "2025-08-18",
+      "category": "grants",
+      "title": "College of Engineering Major Grant Initiative award",
+      "summary": "The Virginia Tech College of Engineering Major Grant Initiative Program is funding our work on AI-driven autonomous experimentation for turbulent flows, closing the loop between simulation, measurement and model in a domain where the data rates punish any delay.",
+      "links": []
+    },
+    {
+      "slug": "marvel-ojcas",
+      "date": "2025-06-16",
+      "category": "papers",
+      "title": "MARVEL published in IEEE Open Journal of Circuits and Systems",
+      "summary": "MARVEL generates custom RISC-V extensions for a whole class of lightweight AI models rather than a single network, co-designing the instruction set with the model family. Published in IEEE Open Journal of Circuits and Systems, led by University College Dublin with Queen's University Belfast.",
+      "links": []
+    },
+    {
+      "slug": "sigma-xi-2025",
+      "date": "2025-06-02",
+      "category": "awards",
+      "title": "Dimitrios elected a Full Member of Sigma Xi",
+      "summary": "PEARL Director Dimitrios S. Nikolopoulos was elected a Full Member of Sigma Xi, The Scientific Research Honor Society.",
+      "links": []
+    },
+    {
+      "slug": "max-tim-msc",
+      "date": "2025-05-16",
+      "category": "people",
+      "title": "Max Fisher and Timothy Coyne defend their M.Sc. theses",
+      "summary": "Congratulations to Max Fisher, on memory access patterns and prefetching strategies for large language model inference, and to Timothy Coyne, on the performance portability of CUDA across NVIDIA GPU architectures. Both have joined Bloomberg as software engineers.",
+      "links": []
+    },
+    {
+      "slug": "spatharakis-visit",
+      "date": "2025-04-07",
+      "category": "people",
+      "title": "Dimitris Spatharakis joins the lab as a visiting postdoctoral fellow",
+      "summary": "Dimitris Spatharakis of the National Technical University of Athens spent spring 2025 with the lab as a visiting postdoctoral fellow, working on speculative decoding for edge serving. SLED, presented at SEC in December, came out of that visit.",
+      "links": []
+    },
+    {
+      "slug": "aaai25-hired",
+      "date": "2025-02-27",
+      "category": "papers",
+      "title": "HiRED presented at AAAI 2025",
+      "summary": "High-resolution vision–language models spend most of their compute on image tokens that carry almost no information. HiRED uses the model's own attention to decide which ones to drop. Presented at the 39th AAAI Conference on Artificial Intelligence in Philadelphia. Congratulations to Hasan Arif and co-authors.",
+      "links": []
+    }
+  ]
+}
