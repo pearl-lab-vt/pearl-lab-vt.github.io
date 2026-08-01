@@ -298,53 +298,43 @@ footer.site .links { display: flex; gap: 18px; flex-wrap: wrap; }
 .article h1 { font-size: 2rem; }
 .article img { max-width: 100%; border-radius: var(--radius); }
 
-/* ---------- sponsors ---------- */
-.sponsors { background: var(--bg-alt); padding: 40px 0; }
+/* ---------- sponsors / acknowledgement ---------- */
+.sponsors { background: var(--bg-alt); padding: 44px 0; }
 .sponsor-head {
   font-size: .74rem;
   text-transform: uppercase;
   letter-spacing: .13em;
   color: var(--muted);
   font-weight: 700;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 .sponsor-row {
   list-style: none; margin: 0; padding: 0;
-  display: flex; flex-wrap: wrap; align-items: stretch; gap: 16px;
+  display: grid; gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
-.sponsor-row > li { flex: 0 1 auto; }
-
-/* White plate: brand policies forbid recolouring, and every one of these marks
-   is drawn for a light background. The plate keeps them legible in dark mode. */
 .sponsor {
-  display: flex; align-items: center; justify-content: center;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 16px 22px;
-  min-height: 78px;
-  min-width: 150px;
-  text-decoration: none;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 4px;
+  border-left: 2px solid var(--line);
+  padding: 2px 0 2px 16px;
 }
-.sponsor:hover { text-decoration: none; border-color: var(--muted); }
-.sponsor img { max-height: 46px; max-width: 220px; width: auto; height: auto; display: block; }
-.sponsor .sponsor-name { display: none; }
-.sponsor.nologo .sponsor-name {
-  display: block;
-  font-size: .92rem;
-  font-weight: 600;
-  color: #2f3338;
-  text-align: center;
-  line-height: 1.3;
-  max-width: 200px;
+/* Official marks go on a white plate: they are drawn for light backgrounds and
+   brand rules forbid recolouring them for dark mode. */
+.sponsor img {
+  max-height: 42px; max-width: 190px; width: auto; height: auto;
+  display: block; margin-bottom: 8px;
+  background: #fff; border-radius: 4px; padding: 5px 8px;
 }
+.sponsor.nologo { border-left-color: var(--orange); }
+.sponsor-name {
+  font-weight: 650; font-size: .97rem; color: var(--ink);
+  text-decoration: none; line-height: 1.3;
+}
+.sponsor-name:hover { color: var(--maroon); text-decoration: underline; }
+.sponsor-detail { font-size: .82rem; color: var(--muted); line-height: 1.45; }
 .sponsor-note {
-  margin: 22px 0 0;
-  font-size: .8rem;
-  color: var(--muted);
-  max-width: 76ch;
+  margin: 26px 0 0; font-size: .8rem; color: var(--muted); max-width: 76ch;
 }
 @media (max-width: 640px) {
-  .sponsor { min-width: 0; flex: 1 1 130px; padding: 14px; }
-  .sponsor img { max-height: 36px; }
+  .sponsor-row { grid-template-columns: 1fr; gap: 14px; }
 }

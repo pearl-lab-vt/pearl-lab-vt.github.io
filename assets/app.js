@@ -86,6 +86,7 @@ async function renderChrome(current) {
         ${l.linkedin ? `<a href="${esc(l.linkedin)}">LinkedIn</a>` : ''}
         ${l.github ? `<a href="${esc(l.github)}">GitHub</a>` : ''}
         ${l.scholar ? `<a href="${esc(l.scholar)}">Scholar</a>` : ''}
+        ${l.orcid ? `<a href="${esc(l.orcid)}">ORCID</a>` : ''}
         <a href="${base}feed.xml">RSS</a>
       </div>
     </div>`;
@@ -96,11 +97,17 @@ async function renderChrome(current) {
 
 /* ---------- sponsors ---------- */
 
-/* Logos are shown unmodified, at full colour, on a white plate, at a uniform
-   height. Brand policies almost universally forbid recolouring or filtering, so
-   no greyscale/hover tricks here. If a file is missing the <img> swaps itself
-   for the sponsor's name, which keeps the page correct before the official
-   files arrive. */
+/* This is an acknowledgement of support first and a logo strip second.
+   A named sponsor with the award it funded is the thing NSF and DOE actually
+   require, and it needs no permission from anybody. A logo, where we have the
+   official file and the right to display it, sits above that name.
+
+   Logos are shown unmodified, at full colour, on a white plate: brand policies
+   almost universally forbid recolouring or filtering, and every one of these
+   marks is drawn for a light background. If a file is missing, the <img>
+   removes itself and the entry stands on the name and the award — which is
+   why the section reads as deliberate rather than broken while we wait for
+   permissions. */
 function renderSponsors(sponsors) {
   const base = window.PEARL_BASE || '';
   const items = (sponsors.items || []).filter(s => !s.hidden);
@@ -109,12 +116,11 @@ function renderSponsors(sponsors) {
   return `<div class="wrap">
     <h2 class="sponsor-head">${esc(sponsors.heading)}</h2>
     <ul class="sponsor-row">
-      ${items.map(s => `<li>
-        <a class="sponsor" href="${esc(s.url)}" title="${esc(s.detail || s.name)}">
-          <img src="${base}${esc(s.file)}" alt="${esc(s.name)}" loading="lazy"
-               onerror="this.closest('.sponsor').classList.add('nologo');this.remove();">
-          <span class="sponsor-name">${esc(s.short || s.name)}</span>
-        </a>
+      ${items.map(s => `<li class="sponsor">
+        ${s.file ? `<img src="${base}${esc(s.file)}" alt="${esc(s.name)} logo" loading="lazy"
+             onerror="this.closest('.sponsor').classList.add('nologo');this.remove();">` : ''}
+        <a class="sponsor-name" href="${esc(s.url)}">${esc(s.name)}</a>
+        ${s.detail ? `<span class="sponsor-detail">${esc(s.detail)}</span>` : ''}
       </li>`).join('')}
     </ul>
     ${sponsors.note ? `<p class="sponsor-note">${esc(sponsors.note)}</p>` : ''}
@@ -302,7 +308,7 @@ async function renderPeople() {
     <section style="border:0;padding:44px 0 0">
       <div class="callout">
         <p><strong>Joining the lab.</strong> We admit Ph.D. students through the Virginia Tech
-        <a href="https://www.cs.vt.edu/graduate">Computer Science</a> and
+        <a href="https://website.cs.vt.edu/academic/graduate.html">Computer Science</a> and
         <a href="https://ece.vt.edu/grad.html">Electrical &amp; Computer Engineering</a> graduate
         programs, and we work with undergraduates year-round. Write to
         <a href="mailto:dsn@vt.edu">dsn@vt.edu</a> with your CV and a short note on what you want to build.</p>
