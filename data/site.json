@@ -34,5 +34,7 @@
     "A": "Accelerators",
     "R": "Runtimes",
     "L": "Learning"
-  }
+  },
+  "institution_url": "https://www.vt.edu",
+  "institution_logo": "assets/Horizontal_VT_Full_Color_RGB.png"
 }

@@ -116,6 +116,7 @@ ARTICLE = """<!DOCTYPE html>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+<div class="institution" id="institution"></div>
 <header class="site" id="site-header"></header>
 <main id="main">
   <article class="wrap article">

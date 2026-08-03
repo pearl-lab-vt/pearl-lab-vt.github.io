@@ -88,6 +88,7 @@ html = f"""<!DOCTYPE html>
 </head>
 <body>
 {BANNER}
+<div class="institution" id="institution"></div>
 <header class="site" id="site-header"></header>
 <main id="main"></main>
 <footer class="site" id="site-footer"></footer>

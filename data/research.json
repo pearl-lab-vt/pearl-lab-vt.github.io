@@ -26,6 +26,7 @@
         "SLED and WISP — speculative LLM decoding and SLO-aware batching at the edge",
         "Polymorph — energy-efficient video classification on embedded devices",
         "MARVEL — custom RISC-V extensions generated for a whole class of lightweight AI models",
+        "Accelerating transformer inference on RISC-V for edge AI",
         "O-RAN slicing — scaling and placing edge servers for next-generation wireless"
       ]
     },

@@ -2,6 +2,14 @@
   "note": "Selected lab publications from 2024 onward. The director's complete list, more than 280 refereed papers, is at <a href=\"https://dsniko.github.io/publications/\">dsniko.github.io/publications</a>.",
   "items": [
     {
+      "title": "A Framework for Accelerating Transformer Inference on RISC-V for Edge AI",
+      "authors": "M. Ajay Kumar, V. PS, Y. Li, Shashwat Shanker, Dimitrios S. Nikolopoulos, Bo Ji, Hans Vandierendonck, Deepu John",
+      "venue": "33rd IEEE International Conference on Electronics, Circuits and Systems (ICECS), Thessaloniki",
+      "year": 2026,
+      "type": "conference",
+      "topic": "edge"
+    },
+    {
       "title": "FACT: Compositional Kernel Synthesis with a Three-Stage Agentic Workflow",
       "authors": "Sina Heidari, Dimitrios S. Nikolopoulos",
       "venue": "arXiv:2604.26666 [cs.DC]",

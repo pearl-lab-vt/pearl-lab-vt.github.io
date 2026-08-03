@@ -338,3 +338,28 @@ footer.site .links { display: flex; gap: 18px; flex-wrap: wrap; }
 @media (max-width: 640px) {
   .sponsor-row { grid-template-columns: 1fr; gap: 14px; }
 }
+
+/* ---------- institutional band ---------- */
+.institution {
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  padding: 9px 0;
+}
+.institution .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+}
+.inst { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.inst:hover { text-decoration: none; }
+.inst img { max-height: 30px; width: auto; display: block; }
+/* The wordmark shows only when no official logo file is present. */
+.inst .inst-name {
+  display: none;
+  font-family: var(--serif); font-size: 1.05rem; font-weight: 700;
+  color: #861f41; letter-spacing: .01em;
+}
+.inst.nologo .inst-name, .inst:not(:has(img)) .inst-name { display: block; }
+.inst-depts { font-size: .78rem; color: #6b7280; }
+.inst-depts a { color: #6b7280; }
+.inst-depts a:hover { color: #861f41; }
+@media (max-width: 720px) { .inst-depts { display: none; } }

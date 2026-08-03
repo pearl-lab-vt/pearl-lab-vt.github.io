@@ -57,6 +57,24 @@ async function renderChrome(current) {
     } catch (_) { /* logo is decorative; the wordmark stands on its own */ }
   }
 
+  // Institutional band. The Virginia Tech logo is a licensed trademark: download
+  // the official file from brand.vt.edu (VT login) and save it at the path in
+  // site.institution_logo. Until then this shows the university name in type,
+  // which is always permissible.
+  const band = el('#institution');
+  if (band) {
+    band.innerHTML = `<div class="wrap">
+      <a class="inst" href="${esc(site.institution_url || 'https://www.vt.edu')}">
+        ${site.institution_logo ? `<img src="${base}${esc(site.institution_logo)}"
+             alt="${esc(site.institution)}"
+             onerror="this.closest('.inst').classList.add('nologo');this.remove();">` : ''}
+        <span class="inst-name">${esc(site.institution)}</span>
+      </a>
+      <span class="inst-depts">${site.departments.map(d =>
+        `<a href="${esc(d.url)}">${esc(d.name)}</a>`).join(' &middot; ')}</span>
+    </div>`;
+  }
+
   const header = el('#site-header');
   if (header) {
     header.innerHTML = `<div class="wrap">
@@ -120,7 +138,6 @@ function renderSponsors(sponsors) {
         ${s.file ? `<img src="${base}${esc(s.file)}" alt="${esc(s.name)} logo" loading="lazy"
              onerror="this.closest('.sponsor').classList.add('nologo');this.remove();">` : ''}
         <a class="sponsor-name" href="${esc(s.url)}">${esc(s.name)}</a>
-        ${s.detail ? `<span class="sponsor-detail">${esc(s.detail)}</span>` : ''}
       </li>`).join('')}
     </ul>
     ${sponsors.note ? `<p class="sponsor-note">${esc(sponsors.note)}</p>` : ''}

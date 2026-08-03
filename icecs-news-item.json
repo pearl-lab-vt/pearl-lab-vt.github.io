@@ -1,0 +1,8 @@
+{
+  "slug": "icecs26-riscv-transformers",
+  "date": "2026-08-01",
+  "category": "papers",
+  "title": "Transformer inference on RISC-V, accepted at ICECS 2026",
+  "summary": "Running a transformer on an edge device means running it on whatever silicon the device already has, which increasingly means RISC-V. Our hardware/software framework accelerates transformer inference on RISC-V platforms for edge AI. The paper appears at the 33rd IEEE International Conference on Electronics, Circuits and Systems in Thessaloniki this November. Work led by University College Dublin with Queen's University Belfast and Virginia Tech.",
+  "links": [{ "label": "ICECS 2026", "url": "https://www.icecs2026.gr" }]
+}

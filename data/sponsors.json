@@ -1,43 +1,38 @@
 {
-  "_comment": "Acknowledgement of support, shown under the hero on the home page and at the foot of the research page. Each entry always shows the sponsor's name and what they funded; that needs nobody's permission and is what NSF and DOE ask for. `file` is OPTIONAL: leave it empty until you have the official logo AND the right to display it (see assets/sponsors/README.md), then set it to e.g. \"assets/sponsors/nsf.png\" and the logo appears above the name. Set \"hidden\": true to keep an entry on file without showing it.",
+  "_comment": "Acknowledgement of support. Sponsor NAMES always show and need nobody's permission. To add a logo: download the official file (see assets/sponsors/README.md for the source and the permission position for each), save it in assets/sponsors/ under exactly the filename in `file`, and it appears automatically — no code change. Until the file exists the entry shows the name alone. Set \"hidden\": true to keep an entry on file without displaying it.",
   "heading": "Our work is supported by",
   "note": "Any opinions, findings, and conclusions or recommendations expressed on this site are those of the authors and do not necessarily reflect the views of our sponsors.",
   "items": [
     {
       "name": "U.S. National Science Foundation",
       "short": "NSF",
-      "file": "",
-      "url": "https://www.nsf.gov",
-      "detail": "SWEET (#2315851) · HardLambda (#2106634) · National AI Research Resource"
+      "file": "assets/sponsors/nsf.png",
+      "url": "https://www.nsf.gov"
     },
     {
       "name": "U.S. Department of Energy",
       "short": "DOE",
-      "file": "",
-      "url": "https://www.energy.gov",
-      "detail": "Early Career Principal Investigator Award (#DE-FG02-06ER25751)"
+      "file": "assets/sponsors/doe-awardee.png",
+      "url": "https://www.energy.gov"
     },
     {
       "name": "Sony",
       "short": "Sony",
-      "file": "",
-      "url": "https://www.sony.com",
-      "detail": "SCALE-R (2026) · WASML Faculty Innovation Award (2023)"
+      "file": "assets/sponsors/sony.png",
+      "url": "https://www.sony.com"
     },
     {
       "name": "Amazon",
       "short": "Amazon",
-      "file": "",
+      "file": "assets/sponsors/amazon.png",
       "url": "https://www.amazon.science",
-      "detail": "Multi-agent LLM systems (2026)",
       "hidden": true
     },
     {
       "name": "Virginia Tech College of Engineering",
-      "short": "Virginia Tech College of Engineering",
-      "file": "",
-      "url": "https://eng.vt.edu",
-      "detail": "Major Grant Initiative Program (2025) · ICTAS / Institute for Advanced Computing (2025)"
+      "short": "VT Engineering",
+      "file": "assets/sponsors/vt-engineering.png",
+      "url": "https://eng.vt.edu"
     }
   ]
 }
