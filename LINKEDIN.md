@@ -91,8 +91,12 @@ will reach LinkedIn and shows you the text that will be posted:
 If that text is not what you want on the company page, answer `n` at the
 prompt, fix the `summary`, and run it again.
 
-3. Buffer picks the item up within the hour and puts it in your queue.
-4. Approve it in Buffer. It posts.
+3. Buffer polls the feed on its own schedule, up to about an hour on the free
+   tier. The item then appears under **Create → Feeds** — in the reading view,
+   **not** in your publishing queue. Nothing reaches the queue on its own; the
+   auto-queueing "Content Inbox" Buffer once had was retired in 2020.
+4. Click **Create Post** on the item, then schedule or publish it. That is the
+   step that puts it in the queue.
 
 ---
 
@@ -104,9 +108,14 @@ is nearly always one of three things: the item is marked `"draft": true`, its
 date is before `feed_since`, or the deploy has not finished. Check the Actions
 tab on GitHub for a green check.
 
-**If the item is in the feed but not in Buffer**, Buffer polls on its own
-schedule and can take up to an hour on the free tier. There is usually a manual
-refresh in the feed settings.
+**If your Buffer queue is empty, that is normal.** Feeds never populate the
+queue. Look under **Create → Feeds**, not at the queue. An empty *queue* means
+nothing has been posted yet; an empty *Feeds view* is the real problem.
+
+**If the item is in the feed but not in Buffer's Feeds view**, Buffer polls on
+its own schedule and can take up to an hour on the free tier. There is usually a
+manual refresh in the feed settings. Confirm the feed URL was actually saved:
+the free tier allows up to 3 feeds, paid up to 50.
 
 **If a post looks wrong on LinkedIn**, LinkedIn caches preview cards
 aggressively. Their Post Inspector at
