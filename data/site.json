@@ -14,10 +14,6 @@
     {
       "name": "Department of Computer Science",
       "url": "https://www.cs.vt.edu"
-    },
-    {
-      "name": "Bradley Department of Electrical and Computer Engineering",
-      "url": "https://ece.vt.edu"
     }
   ],
   "links": {
@@ -36,5 +32,5 @@
     "L": "Learning"
   },
   "institution_url": "https://www.vt.edu",
-  "institution_logo": "assets/Horizontal_VT_Full_Color_RGB.png"
+  "institution_logo": "assets/vt-logo.png"
 }

@@ -70,8 +70,6 @@ async function renderChrome(current) {
              onerror="this.closest('.inst').classList.add('nologo');this.remove();">` : ''}
         <span class="inst-name">${esc(site.institution)}</span>
       </a>
-      <span class="inst-depts">${site.departments.map(d =>
-        `<a href="${esc(d.url)}">${esc(d.name)}</a>`).join(' &middot; ')}</span>
     </div>`;
   }
 
