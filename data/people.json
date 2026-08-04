@@ -16,7 +16,7 @@
     {
       "id": "phd",
       "title": "Ph.D. Researchers",
-      "note": "Seven advised directly, two co-advised.",
+      "note": "Seven students are supervised as primary advisor and two are co-supervised.",
       "members": [
         {
           "name": "Xiangchen Li",
@@ -491,5 +491,5 @@
       "topic": "Application Parallelization and Optimization on Cell/BE"
     }
   ],
-  "alumni_note": "This list covers PEARL members at Virginia Tech. Mentees from Queen's University Belfast, the University of Crete and the College of William &amp; Mary are recorded on the director's <a href=\"https://dsniko.github.io/mentees/\">personal page</a>."
+  "alumni_note": "This list records members of the group at Virginia Tech. Students and postdoctoral researchers supervised at Queen's University Belfast, the University of Crete and the College of William &amp; Mary are recorded on the director's <a href=\"https://dsniko.github.io/mentees/\">personal page</a>."
 }

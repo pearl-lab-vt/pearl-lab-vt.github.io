@@ -70,6 +70,8 @@ async function renderChrome(current) {
              onerror="this.closest('.inst').classList.add('nologo');this.remove();">` : ''}
         <span class="inst-name">${esc(site.institution)}</span>
       </a>
+      <span class="inst-depts">${site.departments.map(d =>
+        `<a href="${esc(d.url)}">${esc(d.name)}</a>`).join(' &middot; ')}</span>
     </div>`;
   }
 
@@ -157,7 +159,7 @@ async function renderHome() {
         .map(([k, v]) => `<div><b>${esc(k)}</b>${esc(v)}</div>`).join('')}</div>` : ''}
     <p class="meta">Directed by <a href="${esc(site.director.url)}">${esc(site.director.name)}</a>,
       ${esc(site.director.title)} &middot;
-      ${site.departments.map(d => `<a href="${esc(d.url)}">${esc(d.name)}</a>`).join(' and ')}</p>
+      ${site.departments.map(d => `<a href="${esc(d.url)}">${esc(d.name)}</a>`).join(', ')}</p>
   </div>`;
 
   const sponsorBand = el('#sponsors');
@@ -165,8 +167,8 @@ async function renderHome() {
 
   el('#thrusts').innerHTML = `<div class="wrap">
     <div class="section-head">
-      <h2>What we work on</h2>
-      <a href="${base}research.html">All research &rarr;</a>
+      <h2>Research</h2>
+      <a href="${base}research.html">Research programme &rarr;</a>
     </div>
     <div class="grid three">
       ${research.thrusts.map(t => `<div class="card">
@@ -181,7 +183,7 @@ async function renderHome() {
   const recent = published(news.items).slice(0, 5);
   el('#latest').innerHTML = `<div class="wrap">
     <div class="section-head">
-      <h2>Latest news</h2>
+      <h2>Recent news</h2>
       <a href="${base}news.html">All news &rarr;</a>
     </div>
     ${recent.length ? `<ul class="news-list">${recent.map(newsRow).join('')}</ul>`
@@ -215,8 +217,8 @@ async function renderNews() {
   el('#news').innerHTML = `<div class="wrap">
     <div class="eyebrow">Updates</div>
     <h1>News</h1>
-    <p class="lede" style="max-width:60ch">Papers, awards, grants, and people. Everything here also goes
-      out on our <a href="${window.PEARL_BASE || ''}feed.xml">RSS feed</a> and to
+    <p class="lede" style="max-width:60ch">Publications, awards, funding and group news. Items are
+      also distributed via our <a href="${window.PEARL_BASE || ''}feed.xml">RSS feed</a> and on
       <a href="${esc((DATA.site && DATA.site.links.linkedin) || '#')}">LinkedIn</a>.</p>
     <div class="filters" id="news-filters">
       <button aria-pressed="true" data-cat="">All</button>
@@ -251,7 +253,7 @@ async function renderResearch() {
 
   el('#research').innerHTML = `<div class="wrap">
     <div class="eyebrow">Research</div>
-    <h1>${esc(research.headline)}</h1>
+    <h1>Research programme</h1>
     <p class="lede" style="max-width:66ch">${esc(research.intro)}</p>
     ${research.thrusts.map(t => {
       const related = pubs.items.filter(p => p.topic === t.id).slice(0, 4);
@@ -261,7 +263,7 @@ async function renderResearch() {
         <p style="max-width:66ch">${esc(t.blurb)}</p>
         <div class="grid two">
           <div class="card">
-            <h3>Threads</h3>
+            <h3>Current work</h3>
             <ul>${(t.highlights || []).map(h => `<li>${esc(h)}</li>`).join('')}</ul>
           </div>
           ${related.length ? `<div class="card">
@@ -299,7 +301,7 @@ async function renderPeople() {
 
   el('#people').innerHTML = `<div class="wrap">
     <div class="eyebrow">People</div>
-    <h1>The lab</h1>
+    <h1>Members</h1>
     ${people.groups.map(g => `<section style="border:0;padding:34px 0 0">
       <h2>${esc(g.title)}</h2>
       ${g.note ? `<p style="color:var(--muted);font-size:.95rem">${esc(g.note)}</p>` : ''}
@@ -322,11 +324,12 @@ async function renderPeople() {
 
     <section style="border:0;padding:44px 0 0">
       <div class="callout">
-        <p><strong>Joining the lab.</strong> We admit Ph.D. students through the Virginia Tech
-        <a href="https://website.cs.vt.edu/academic/graduate.html">Computer Science</a> and
-        <a href="https://ece.vt.edu/grad.html">Electrical &amp; Computer Engineering</a> graduate
-        programs, and we work with undergraduates year-round. Write to
-        <a href="mailto:dsn@vt.edu">dsn@vt.edu</a> with your CV and a short note on what you want to build.</p>
+        <p><strong>Prospective students.</strong> Doctoral students are admitted through the
+        Virginia Tech <a href="https://website.cs.vt.edu/academic/graduate.html">Computer Science</a>
+        and <a href="https://ece.vt.edu/grad.html">Electrical and Computer Engineering</a> graduate
+        programmes. Undergraduate researchers are supervised throughout the academic year.
+        Enquiries, accompanied by a curriculum vitae and a brief statement of research interests,
+        may be addressed to <a href="mailto:dsn@vt.edu">dsn@vt.edu</a>.</p>
       </div>
     </section>
   </div>`;

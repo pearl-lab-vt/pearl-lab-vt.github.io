@@ -3,7 +3,7 @@
   "tagline": "Performance Engineering for Accelerators, Runtimes and Learning",
   "url": "https://pearl-lab-vt.github.io",
   "institution": "Virginia Tech",
-  "description": "PEARL builds the systems software that brings demanding AI within reach of the hardware people already have, from wearables and edge devices to warehouse-scale machines.",
+  "description": "PEARL investigates the runtime systems, memory hierarchies, schedulers and compilers that determine the cost of executing machine learning workloads, from embedded and wearable devices to warehouse-scale computers.",
   "director": {
     "name": "Dimitrios S. Nikolopoulos",
     "title": "John W. Hancock Jr. Professor of Engineering",

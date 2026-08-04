@@ -1,68 +1,68 @@
 {
-  "headline": "AI is getting more capable and more expensive at the same time. We work on the second half of that sentence.",
-  "intro": "Reading a scan, drafting a summary, steering an experiment: every useful thing a model does costs electricity, hardware, and time. Those costs decide who gets to use it. A system that demands a rack of accelerators serves the institutions that can afford a rack of accelerators, while a system that fits on a wearable serves a patient at home. PEARL moves the line between those two worlds. We build the runtimes, memory systems, schedulers, and compilers that bring demanding computation within reach of the hardware people already have.",
-  "closing": "Efficiency is an access question. Speed and cost are never the point on their own; they decide whether a capability stays in a datacenter or reaches a clinic, a classroom, a field station, a phone.",
+  "headline": "Efficient and resilient systems for machine learning across the computing continuum",
+  "intro": "The cost of executing a model, measured in energy, in hardware, and in latency, increasingly determines where that model can be deployed and which institutions can afford to use it. PEARL investigates the runtime systems, memory hierarchies, schedulers, and compilers that govern this cost. Our objective is to make demanding inference and training workloads tractable on the hardware that is actually available, from embedded and wearable devices through edge infrastructure to warehouse-scale computers.",
+  "closing": "Efficiency in this setting is a question of access rather than of engineering elegance. The performance and energy characteristics of a system determine whether a given capability remains confined to well-provisioned data centres or becomes available in a clinic, a classroom, a field station, or a handheld device.",
   "thrusts": [
     {
       "id": "llm-serving",
-      "title": "Making AI affordable to run",
-      "stake": "Serving a model costs more than training it. That is where the dollars and the electricity go.",
-      "blurb": "Training happens once. Serving happens a billion times. We rebuild the serving stack so the same hardware answers many more questions: overlapping CPU and GPU work instead of letting either idle, restructuring how the KV cache is stored and shared, discarding tokens that do not change the output, and setting numerical precision per layer and per timestep rather than once for the whole model.",
+      "title": "Efficient serving of large generative models",
+      "stake": "Inference, rather than training, now dominates the aggregate energy and capacity cost of deployed models.",
+      "blurb": "Training a large model is a bounded expense incurred once; serving it is an unbounded expense incurred across billions of invocations. Our work restructures the serving stack along four axes: asynchronous overlap of CPU and GPU execution to eliminate idle time on either processor, reorganisation and reuse of the key-value cache, elimination of token-level redundancy that does not affect the output, and selection of numerical precision per layer and per timestep rather than uniformly across the model.",
       "highlights": [
-        "APEX — asynchronous CPU–GPU execution that serves online LLM inference on GPUs too small for the model",
-        "dLLM-Serve — closing the memory gap in diffusion language model serving",
+        "APEX — asynchronous CPU–GPU execution for online LLM inference on memory-constrained GPUs",
+        "dLLM-Serve — memory management for diffusion language model serving",
         "HiRED — attention-guided token dropping for high-resolution vision–language models",
-        "DiffPro — joint timestep and layer-wise precision optimization for diffusion inference",
-        "HydraCache — long-context prefill parallelization via distributed cache blending"
+        "DiffPro — joint timestep and layer-wise precision optimisation for diffusion inference",
+        "HydraCache — long-context prefill parallelisation via distributed cache blending"
       ]
     },
     {
       "id": "edge",
-      "title": "Putting intelligence where people are",
-      "stake": "Some data should never leave the device that measured it. Some decisions cannot wait for a round trip.",
-      "blurb": "A wearable flags an arrhythmia. A camera watches a production line. A base station reallocates spectrum. Each needs an answer in milliseconds, often over an unreliable network, and frequently from data too sensitive to send anywhere at all. We work out how to divide a model across the device, the edge server, and the cloud: what to quantize, what to speculate, what to transmit. The intelligence runs next to the person, and the expensive machinery runs only when it earns its place.",
+      "title": "Inference at the edge and across the continuum",
+      "stake": "Latency budgets, intermittent connectivity, and data-governance constraints frequently preclude offloading inference to a data centre.",
+      "blurb": "Applications in clinical monitoring, industrial inspection, and radio access networks require inference within millisecond budgets, often over unreliable links, and frequently on data that cannot lawfully or safely leave the device on which it was acquired. We study how to partition a model across device, edge server, and cloud tiers, and how to determine what should be quantised, what should be speculatively executed, and what should be transmitted. The resulting systems place the latency-critical computation adjacent to the point of measurement and invoke remote resources only when the accuracy benefit justifies the cost.",
       "highlights": [
-        "SWEET — workload-balanced edge inference via quantization and partitioning (NSF, with QUB and UCD)",
-        "SLED and WISP — speculative LLM decoding and SLO-aware batching at the edge",
-        "Polymorph — energy-efficient video classification on embedded devices",
-        "MARVEL — custom RISC-V extensions generated for a whole class of lightweight AI models",
-        "Accelerating transformer inference on RISC-V for edge AI",
-        "O-RAN slicing — scaling and placing edge servers for next-generation wireless"
+        "SWEET — workload-balanced edge inference via quantisation and partitioning (NSF, with QUB and UCD)",
+        "SLED and WISP — speculative decoding and SLO-aware batching for distributed edge serving",
+        "Polymorph — energy-constrained multi-label classification of video streams on embedded devices",
+        "MARVEL — automated generation of model-class aware custom RISC-V extensions",
+        "Accelerating transformer inference on RISC-V for edge deployment",
+        "O-RAN slicing — scaling and placement of edge servers for next-generation wireless"
       ]
     },
     {
       "id": "memory",
-      "title": "Getting more out of the hardware that already exists",
-      "stake": "Accelerators are scarce and expensive. Most of them sit idle.",
-      "blurb": "A GPU handed to a single tenant runs at half capacity. A dataset that overflows fast memory drags an entire job down to the speed of the slowest tier. Buying more hardware fixes neither, because both are scheduling and memory-management failures rather than shortages. We build the mechanisms that let several workloads share one accelerator safely, predict which pages a program will need before it stalls, and place data across memory tiers without asking the programmer to think about it.",
+      "title": "Memory systems and accelerator utilisation",
+      "stake": "Accelerator capacity is scarce and costly, yet utilisation in production deployments remains substantially below the achievable maximum.",
+      "blurb": "An accelerator dedicated to a single tenant is typically underutilised, and a working set that exceeds fast memory reduces the throughput of an entire job to that of the slowest tier in the hierarchy. Neither condition is remedied by additional hardware, since both arise from scheduling and memory-management policy rather than from insufficient capacity. We develop mechanisms for safe spatial sharing of accelerators among concurrent workloads, for predicting page access ahead of demand faults, and for placing data across memory tiers without requiring explicit programmer intervention.",
       "highlights": [
-        "ParvaGPU — spatial GPU sharing for large-scale DNN inference in the cloud",
-        "Stride-aware page prefetching for GPU unified memory via Markov prediction",
-        "Memory tiering inside the Python virtual machine",
-        "Application-attuned memory management for containerized HPC workflows"
+        "ParvaGPU — spatial GPU sharing for large-scale DNN inference in cloud environments",
+        "Stride-aware page prefetching for GPU unified memory via Markov pattern prediction",
+        "Memory tiering within the Python virtual machine",
+        "Application-attuned memory management for containerised HPC workflows"
       ]
     },
     {
       "id": "agentic-hpc",
-      "title": "Teaching machines to make scientific code fast",
-      "stake": "Most scientific software runs well below what its hardware allows. Tuning it is a specialist skill, and specialists are scarce.",
-      "blurb": "A climate model or a genomics pipeline is written by a domain scientist, not a performance engineer, and the distance between the two is often an order of magnitude in runtime. We build multi-agent systems that read the code, propose transformations, measure what happens, and keep only the changes that survive measurement. Trusting a machine-written optimization takes benchmarks and guardrails, so we build those alongside the agents. Undergraduate researchers lead much of this work.",
+      "title": "Agentic methods for high-performance code optimisation",
+      "stake": "Scientific software commonly attains a fraction of the performance its target hardware permits, and the expertise required to close that gap is scarce.",
+      "blurb": "Computational science codes are written predominantly by domain scientists rather than performance engineers, and the resulting gap between attained and achievable performance is frequently an order of magnitude. We develop multi-agent systems that analyse such code, propose transformations, evaluate them empirically, and retain only those changes that are validated by measurement. Establishing confidence in machine-generated optimisations requires benchmarks and correctness guarantees, which we treat as a component of the research rather than as an afterthought. Undergraduate researchers contribute substantially to this effort.",
       "highlights": [
-        "MARCO — multi-agent code optimization for high-performance computing",
+        "MARCO — multi-agent code optimisation for high-performance computing",
         "FACT — compositional CUDA kernel synthesis grounded in CUTLASS C++",
-        "LLM-guided runtime parameter tuning for energy-efficient inference",
+        "LLM-guided runtime parameter optimisation for energy-efficient inference",
         "AI-driven autonomous experimentation for turbulent flows",
-        "Parallel Islands — teaching parallel computing through a video game"
+        "Parallel Islands — an educational instrument for parallel computing"
       ]
     },
     {
       "id": "resilience",
-      "title": "Making it hold up, and making it cheap to run",
-      "stake": "A system that returns a wrong answer without warning, or quietly consumes a power budget, is worse than one that fails outright.",
-      "blurb": "At scale, hardware faults stop being hypothetical and energy stops being an afterthought. We measure where the joules go, stage by stage and instruction by instruction, then build recovery mechanisms that let a long computation survive a failure without restarting from zero. The aim is a system whose cost and correctness you can reason about before committing a month of machine time to it.",
+      "title": "Resilience and energy accounting at scale",
+      "stake": "At scale, hardware faults are routine rather than exceptional, and energy consumption constitutes a first-order design constraint.",
+      "blurb": "A system that returns an incorrect result without indication, or that consumes its power budget without accounting for it, presents a more serious problem than one that fails observably. We characterise energy consumption at the granularity of execution stage, input modality, and instruction, and we develop recovery mechanisms that permit a long-running computation to survive component failure without restarting from its initial state. The intent is to render the cost and the correctness of a computation predictable before substantial machine time is committed to it.",
       "highlights": [
-        "Modality inflation — energy characterization of multimodal LLM inference",
-        "Power Log'n'Roll — power-efficient localized rollback for MPI applications",
+        "Modality inflation — energy characterisation of multimodal LLM inference",
+        "Power Log'n'Roll — power-efficient localised rollback for MPI applications",
         "SAFIRE — compiler-driven parallel fault injection (with LLNL)",
         "Dynamic precision iterative refinement"
       ]
