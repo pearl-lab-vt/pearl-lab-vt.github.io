@@ -134,10 +134,12 @@ function renderSponsors(sponsors) {
   return `<div class="wrap">
     <h2 class="sponsor-head">${esc(sponsors.heading)}</h2>
     <ul class="sponsor-row">
-      ${items.map(s => `<li class="sponsor">
-        ${s.file ? `<img src="${base}${esc(s.file)}" alt="${esc(s.name)} logo" loading="lazy"
+      ${items.map(s => `<li class="sponsor${s.file ? '' : ' nologo'}">
+        <a class="sponsor-link" href="${esc(s.url)}">
+          ${s.file ? `<img src="${base}${esc(s.file)}" alt="${esc(s.name)}" loading="lazy"
              onerror="this.closest('.sponsor').classList.add('nologo');this.remove();">` : ''}
-        <a class="sponsor-name" href="${esc(s.url)}">${esc(s.name)}</a>
+          <span class="sponsor-name">${esc(s.name)}</span>
+        </a>
       </li>`).join('')}
     </ul>
     ${sponsors.note ? `<p class="sponsor-note">${esc(sponsors.note)}</p>` : ''}
@@ -168,7 +170,7 @@ async function renderHome() {
   el('#thrusts').innerHTML = `<div class="wrap">
     <div class="section-head">
       <h2>Research</h2>
-      <a href="${base}research.html">Research programme &rarr;</a>
+      <a href="${base}research.html">Research program &rarr;</a>
     </div>
     <div class="grid three">
       ${research.thrusts.map(t => `<div class="card">
@@ -253,7 +255,7 @@ async function renderResearch() {
 
   el('#research').innerHTML = `<div class="wrap">
     <div class="eyebrow">Research</div>
-    <h1>Research programme</h1>
+    <h1>Research program</h1>
     <p class="lede" style="max-width:66ch">${esc(research.intro)}</p>
     ${research.thrusts.map(t => {
       const related = pubs.items.filter(p => p.topic === t.id).slice(0, 4);
@@ -327,7 +329,7 @@ async function renderPeople() {
         <p><strong>Prospective students.</strong> Doctoral students are admitted through the
         Virginia Tech <a href="https://website.cs.vt.edu/academic/graduate.html">Computer Science</a>
         and <a href="https://ece.vt.edu/grad.html">Electrical and Computer Engineering</a> graduate
-        programmes. Undergraduate researchers are supervised throughout the academic year.
+        programs. Undergraduate researchers are supervised throughout the academic year.
         Enquiries, accompanied by a curriculum vitae and a brief statement of research interests,
         may be addressed to <a href="mailto:dsn@vt.edu">dsn@vt.edu</a>.</p>
       </div>

@@ -319,18 +319,24 @@ footer.site .links { display: flex; gap: 18px; flex-wrap: wrap; }
   padding: 2px 0 2px 16px;
 }
 /* Official marks go on a white plate: they are drawn for light backgrounds and
-   brand rules forbid recolouring them for dark mode. */
+   brand rules forbid recoloring them for dark mode. */
 .sponsor img {
   max-height: 42px; max-width: 190px; width: auto; height: auto;
-  display: block; margin-bottom: 8px;
+  display: block;
   background: #fff; border-radius: 4px; padding: 5px 8px;
 }
+.sponsor-link { display: block; text-decoration: none; }
 .sponsor.nologo { border-left-color: var(--orange); }
+/* The mark carries the name, so type appears only where no logo is shown:
+   either we hold no permission for that mark, or the file failed to load and
+   the onerror handler removed it. */
 .sponsor-name {
+  display: none;
   font-weight: 650; font-size: .97rem; color: var(--ink);
   text-decoration: none; line-height: 1.3;
 }
-.sponsor-name:hover { color: var(--maroon); text-decoration: underline; }
+.sponsor.nologo .sponsor-name { display: block; }
+.sponsor-link:hover .sponsor-name { color: var(--maroon); text-decoration: underline; }
 .sponsor-detail { font-size: .82rem; color: var(--muted); line-height: 1.45; }
 .sponsor-note {
   margin: 26px 0 0; font-size: .8rem; color: var(--muted); max-width: 76ch;
