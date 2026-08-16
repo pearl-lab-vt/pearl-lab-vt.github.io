@@ -3,6 +3,19 @@
   "feed_since": "",
   "items": [
     {
+      "slug": "inlg26-cai-dllm",
+      "date": "2026-08-15",
+      "category": "papers",
+      "title": "CAI-dLLM accepted at INLG 2026",
+      "summary": "Diffusion language models write many tokens at once, then spend most of their time denoising tokens that stopped changing several steps ago. CAI-dLLM reads the confidence of the very first denoising step and uses it to decide what to commit early and where the remaining work should go. Nothing is retrained and no extra predictor is needed. On LLaDA-8B-Instruct it takes GSM8K from 256 denoising steps down to 114 while accuracy stays above the uncached baseline. The paper appears at the 19th International Conference on Natural Language Generation in Utrecht this October. Congratulations to Farhana Amin and Sabiha Afroz. #INLG2026 #NLProc #DiffusionModels #EfficientInference #GreenAI #VirginiaTech",
+      "links": [
+        {
+          "label": "OpenReview",
+          "url": "https://openreview.net/forum?id=tTfAxTfTlC"
+        }
+      ]
+    },
+    {
       "slug": "icecs26-riscv-transformers",
       "date": "2026-08-01",
       "category": "papers",

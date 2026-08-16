@@ -3,11 +3,19 @@
   "items": [
     {
       "title": "A Framework for Accelerating Transformer Inference on RISC-V for Edge AI",
-      "authors": "M. Ajay Kumar, V. PS, Y. Li, Shashwat Shanker, Dimitrios S. Nikolopoulos, Bo Ji, Hans Vandierendonck, Deepu John",
+      "authors": "Ajay Kumar M, Vishnu Ps, Yike Li, Shreejith Shanker, Dimitrios S. Nikolopoulos, Bo Ji, Hans Vandierendonck, Deepu John",
       "venue": "33rd IEEE International Conference on Electronics, Circuits and Systems (ICECS), Thessaloniki",
       "year": 2026,
       "type": "conference",
       "topic": "edge"
+    },
+    {
+      "title": "CAI-dLLM: Convergence Aware Inference for Diffusion Language Models",
+      "authors": "Farhana Amin, Sabiha Afroz, Dimitrios S. Nikolopoulos",
+      "venue": "19th International Conference on Natural Language Generation (INLG), Utrecht",
+      "year": 2026,
+      "type": "conference",
+      "topic": "llm-serving"
     },
     {
       "title": "FACT: Compositional Kernel Synthesis with a Three-Stage Agentic Workflow",
