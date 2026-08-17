@@ -7,7 +7,8 @@
       "venue": "33rd IEEE International Conference on Electronics, Circuits and Systems (ICECS), Thessaloniki",
       "year": 2026,
       "type": "conference",
-      "topic": "edge"
+      "topic": "edge",
+      "url": "https://www.icecs2026.gr"
     },
     {
       "title": "CAI-dLLM: Convergence Aware Inference for Diffusion Language Models",
@@ -15,7 +16,8 @@
       "venue": "19th International Conference on Natural Language Generation (INLG), Utrecht",
       "year": 2026,
       "type": "conference",
-      "topic": "llm-serving"
+      "topic": "llm-serving",
+      "url": "https://openreview.net/forum?id=tTfAxTfTlC"
     },
     {
       "title": "FACT: Compositional Kernel Synthesis with a Three-Stage Agentic Workflow",
@@ -41,7 +43,8 @@
       "venue": "19th European Conference on Computer Vision (ECCV), Malmö",
       "year": 2026,
       "type": "conference",
-      "topic": "llm-serving"
+      "topic": "llm-serving",
+      "url": "https://arxiv.org/abs/2511.11446"
     },
     {
       "title": "Stride-Aware Page Prefetching for GPU Unified Memory via Markov Pattern Prediction",
@@ -49,7 +52,8 @@
       "venue": "ACM SIGPLAN International Symposium on Memory Management (ISMM), Boulder",
       "year": 2026,
       "type": "conference",
-      "topic": "memory"
+      "topic": "memory",
+      "url": "https://doi.org/10.1145/3814942.3816131"
     },
     {
       "title": "dLLM-Serve: Bridging the Memory Gap in Diffusion Language Model Serving",
@@ -57,7 +61,8 @@
       "venue": "40th ACM International Conference on Supercomputing (ICS), Belfast",
       "year": 2026,
       "type": "conference",
-      "topic": "llm-serving"
+      "topic": "llm-serving",
+      "url": "https://doi.org/10.1145/3797905.3800532"
     },
     {
       "title": "APEX: Asynchronous Parallel CPU-GPU Execution for Online LLM Inference on Constrained GPUs",
@@ -65,7 +70,8 @@
       "venue": "40th IEEE International Parallel and Distributed Processing Symposium (IPDPS), New Orleans",
       "year": 2026,
       "type": "conference",
-      "topic": "llm-serving"
+      "topic": "llm-serving",
+      "url": "https://doi.org/10.1109/IPDPS65963.2026.00099"
     },
     {
       "title": "WISP: Waste- and Interference-Suppressed Distributed Speculative LLM Serving at the Edge via Dynamic Drafting and SLO-Aware Batching",
@@ -73,7 +79,8 @@
       "venue": "Proceedings of the ACM on Measurement and Analysis of Computing Systems (POMACS / SIGMETRICS)",
       "year": 2026,
       "type": "journal",
-      "topic": "edge"
+      "topic": "edge",
+      "url": "https://doi.org/10.1145/3805653"
     },
     {
       "title": "SWEET: Serving Workload-Balanced End-to-End Efficient and Tailored Edge Inference via Quantization and Partitioning",
@@ -81,7 +88,8 @@
       "venue": "Frontiers in Complex Systems",
       "year": 2026,
       "type": "journal",
-      "topic": "edge"
+      "topic": "edge",
+      "url": "https://doi.org/10.3389/fcpxs.2026.1801157"
     },
     {
       "title": "Polymorph: Energy-Efficient Multi-Label Classification for Video Streams on Embedded Devices",
@@ -89,7 +97,8 @@
       "venue": "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV), Tucson",
       "year": 2026,
       "type": "conference",
-      "topic": "edge"
+      "topic": "edge",
+      "url": "https://doi.org/10.1109/WACV61042.2026.00622"
     },
     {
       "title": "MARCO: Multi-Agent Code Optimization for High-Performance Computing",
@@ -97,7 +106,8 @@
       "venue": "ACM Capital Region Celebration of Women in Computing (CAPWIC)",
       "year": 2026,
       "type": "conference",
-      "topic": "agentic-hpc"
+      "topic": "agentic-hpc",
+      "url": "https://capwic.org/conferences/2026/"
     },
     {
       "title": "ConfigSpec: Profiling-Based Configuration Selection for Distributed Edge–Cloud Speculative LLM Serving",
@@ -105,7 +115,8 @@
       "venue": "4th International Workshop on Testing Distributed Internet of Things Systems (TDIS), Edinburgh",
       "year": 2026,
       "type": "workshop",
-      "topic": "edge"
+      "topic": "edge",
+      "url": "https://doi.org/10.1145/3802513.3803483"
     },
     {
       "title": "Modality Inflation: Energy Characterization and Optimization Opportunities for MLLM Inference",
@@ -113,7 +124,8 @@
       "venue": "21st International Workshop on Automatic Performance Tuning (iWAPT), New Orleans",
       "year": 2026,
       "type": "workshop",
-      "topic": "resilience"
+      "topic": "resilience",
+      "url": "https://arxiv.org/abs/2512.22695"
     },
     {
       "title": "SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving",
@@ -121,7 +133,8 @@
       "venue": "10th ACM/IEEE Symposium on Edge Computing (SEC), Washington, D.C.",
       "year": 2025,
       "type": "conference",
-      "topic": "edge"
+      "topic": "edge",
+      "url": "https://doi.org/10.1145/3769102.3770608"
     },
     {
       "title": "HiRED: Attention-Guided Token Dropping for Efficient Inference of High-Resolution Vision-Language Models in Resource-Constrained Environments",
@@ -129,7 +142,8 @@
       "venue": "39th AAAI Conference on Artificial Intelligence, Philadelphia",
       "year": 2025,
       "type": "conference",
-      "topic": "llm-serving"
+      "topic": "llm-serving",
+      "url": "https://doi.org/10.1609/aaai.v39i2.32171"
     },
     {
       "title": "Memory Tiering in the Python Virtual Machine",
@@ -137,7 +151,8 @@
       "venue": "17th SPLASH Workshop on Virtual Machines and Language Implementations (VMIL), Singapore",
       "year": 2025,
       "type": "workshop",
-      "topic": "memory"
+      "topic": "memory",
+      "url": "https://doi.org/10.1145/3759548.3763372"
     },
     {
       "title": "MARVEL: An End-to-End Framework for Generating Model-Class Aware Custom RISC-V Extensions for Lightweight AI",
@@ -145,7 +160,8 @@
       "venue": "IEEE Open Journal of Circuits and Systems, vol. 6",
       "year": 2025,
       "type": "journal",
-      "topic": "edge"
+      "topic": "edge",
+      "url": "https://doi.org/10.1109/OJCAS.2025.3589132"
     },
     {
       "title": "HydraCache: Long-Context Prefill Parallelization via Distributed Cache Blending",
@@ -153,7 +169,8 @@
       "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis, Poster, St. Louis",
       "year": 2025,
       "type": "poster",
-      "topic": "llm-serving"
+      "topic": "llm-serving",
+      "url": "https://sc25.supercomputing.org/proceedings/posters/poster_pages/post304.html"
     },
     {
       "title": "Divide, Conquer, and Denoise: Hybrid Parallel Diffusion with Memory-Aware Coarse-to-Fine Inference",
@@ -161,7 +178,8 @@
       "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis, Poster, St. Louis",
       "year": 2025,
       "type": "poster",
-      "topic": "llm-serving"
+      "topic": "llm-serving",
+      "url": "https://sc25.supercomputing.org/proceedings/posters/poster_pages/post246.html"
     },
     {
       "title": "Energy-Efficient Multimodal LLM Inference: Stage-Level Characterization and Input-Aware Controls",
@@ -169,7 +187,8 @@
       "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis, Poster, St. Louis",
       "year": 2025,
       "type": "poster",
-      "topic": "resilience"
+      "topic": "resilience",
+      "url": "https://sc25.supercomputing.org/proceedings/posters/poster_pages/post286.html"
     },
     {
       "title": "ParvaGPU: Efficient Spatial GPU Sharing for Large-Scale DNN Inference in Cloud Environments",
@@ -177,7 +196,8 @@
       "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis",
       "year": 2024,
       "type": "conference",
-      "topic": "memory"
+      "topic": "memory",
+      "url": "https://doi.org/10.1109/SC41406.2024.00048"
     },
     {
       "title": "Application-Attuned Memory Management for Containerized HPC Workflows",
@@ -185,7 +205,8 @@
       "venue": "38th IEEE International Parallel and Distributed Processing Symposium (IPDPS), San Francisco",
       "year": 2024,
       "type": "conference",
-      "topic": "memory"
+      "topic": "memory",
+      "url": "https://doi.org/10.1109/IPDPS57955.2024.00019"
     },
     {
       "title": "FrameFeedback: A Closed-Loop Control System for Dynamic Offloading of Real-Time Edge Inference",
@@ -193,7 +214,8 @@
       "venue": "IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)",
       "year": 2024,
       "type": "workshop",
-      "topic": "edge"
+      "topic": "edge",
+      "url": "https://doi.org/10.1109/IPDPSW63119.2024.00116"
     },
     {
       "title": "On Robust Optimal Joint Deployment and Assignment of RAN Intelligent Controllers in O-RANs",
@@ -201,7 +223,8 @@
       "venue": "IEEE Open Journal of the Communications Society, vol. 5",
       "year": 2024,
       "type": "journal",
-      "topic": "edge"
+      "topic": "edge",
+      "url": "https://doi.org/10.1109/OJCOMS.2024.3383607"
     },
     {
       "title": "Parallel Islands: A Parallel Computing Educational Video Game",
@@ -209,7 +232,8 @@
       "venue": "ACM Technical Symposium on Computer Science Education (SIGCSE TS)",
       "year": 2024,
       "type": "conference",
-      "topic": "agentic-hpc"
+      "topic": "agentic-hpc",
+      "url": "https://doi.org/10.1145/3626253.3635591"
     },
     {
       "title": "Towards an Efficient Python Interpreter for Tiered Memory Systems",
@@ -217,7 +241,8 @@
       "venue": "22nd USENIX Conference on File and Storage Technologies (FAST), Work in Progress",
       "year": 2024,
       "type": "workshop",
-      "topic": "memory"
+      "topic": "memory",
+      "url": "https://www.usenix.org/conference/fast24/wips"
     }
   ]
 }
