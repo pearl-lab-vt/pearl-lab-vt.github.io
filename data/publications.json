@@ -38,6 +38,15 @@
       "url": "https://arxiv.org/abs/2604.27032"
     },
     {
+      "title": "Serving Masked Diffusion LLMs: Characterization and Design Principles from Real Hardware",
+      "authors": "Farhana Amin, Sabiha Afroz, Mona Moghadampanah, Dimitrios S. Nikolopoulos",
+      "venue": "arXiv:2608.23807 [cs.AI]",
+      "year": 2026,
+      "type": "preprint",
+      "topic": "llm-serving",
+      "url": "https://arxiv.org/abs/2608.23807"
+    },
+    {
       "title": "DiffPro: Joint Timestep and Layer-Wise Precision Optimization for Efficient Diffusion Inference",
       "authors": "Farhana Amin, Sabrina Afroz, Kanchon Gharami, Mona Moghadampanah, Dimitrios S. Nikolopoulos",
       "venue": "19th European Conference on Computer Vision (ECCV), Malmö",
