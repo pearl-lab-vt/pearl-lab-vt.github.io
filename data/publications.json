@@ -11,6 +11,24 @@
       "url": "https://www.icecs2026.gr"
     },
     {
+      "title": "ZTA-Q: An Open-Source RISC-V Platform for Accurate Quantized CNN Inference",
+      "authors": "Yike Li, Ajay Kumar M, Vishnu Ps, Deepu John, Dimitrios S. Nikolopoulos, Bo Ji, Hans Vandierendonck",
+      "venue": "33rd IEEE International Conference on Electronics, Circuits and Systems (ICECS), Thessaloniki",
+      "year": 2026,
+      "type": "conference",
+      "topic": "edge",
+      "url": "https://www.icecs2026.gr"
+    },
+    {
+      "title": "DART: ML-Accelerated Surrogate for Real-Time CFD Digital Twins",
+      "authors": "Shunyu Yao, K. Todd Lowe, Dimitrios S. Nikolopoulos",
+      "venue": "8th Annual Workshop on Extreme-Scale Experiment-in-the-Loop Computing (XLOOP), held with SC26, Chicago",
+      "year": 2026,
+      "type": "workshop",
+      "topic": "agentic-hpc",
+      "url": "https://wordpress.cels.anl.gov/xloop-2026/"
+    },
+    {
       "title": "CAI-dLLM: Convergence Aware Inference for Diffusion Language Models",
       "authors": "Farhana Amin, Sabiha Afroz, Dimitrios S. Nikolopoulos",
       "venue": "19th International Conference on Natural Language Generation (INLG), Utrecht",
