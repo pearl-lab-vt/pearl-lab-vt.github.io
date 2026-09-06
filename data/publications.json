@@ -58,6 +58,15 @@
     {
       "title": "Serving Masked Diffusion LLMs: Characterization and Design Principles from Real Hardware",
       "authors": "Farhana Amin, Sabiha Afroz, Mona Moghadampanah, Dimitrios S. Nikolopoulos",
+      "venue": "Workshop on AI on HPC: Performance Engineering, Challenges and Opportunities (AI on HPC), held with SC26, Chicago",
+      "year": 2026,
+      "type": "workshop",
+      "topic": "llm-serving",
+      "url": "https://arxiv.org/abs/2608.23807"
+    },
+    {
+      "title": "Serving Masked Diffusion LLMs: Characterization and Design Principles from Real Hardware",
+      "authors": "Farhana Amin, Sabiha Afroz, Mona Moghadampanah, Dimitrios S. Nikolopoulos",
       "venue": "arXiv:2608.23807 [cs.AI]",
       "year": 2026,
       "type": "preprint",
