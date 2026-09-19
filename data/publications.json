@@ -2,6 +2,15 @@
   "note": "Selected publications from 2024 onward. A complete list of the director's refereed output, in excess of 280 items, is maintained at <a href=\"https://dsniko.github.io/publications/\">dsniko.github.io/publications</a>.",
   "items": [
     {
+      "title": "XMPIaaS: Towards Cloud Native MPI via Cooperative Process Migration",
+      "authors": "Shunyu Yao, Dimitrios S. Nikolopoulos, Ali R. Butt",
+      "venue": "arXiv:2609.16531 [cs.DC]",
+      "year": 2026,
+      "type": "preprint",
+      "topic": "resilience",
+      "url": "https://arxiv.org/abs/2609.16531"
+    },
+    {
       "title": "A Framework for Accelerating Transformer Inference on RISC-V for Edge AI",
       "authors": "Ajay Kumar M, Vishnu Ps, Yike Li, Shreejith Shanker, Dimitrios S. Nikolopoulos, Bo Ji, Hans Vandierendonck, Deepu John",
       "venue": "33rd IEEE International Conference on Electronics, Circuits and Systems (ICECS), Thessaloniki",
