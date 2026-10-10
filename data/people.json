@@ -27,7 +27,8 @@
           "topic": "Edge LLM serving, speculative decoding, model partitioning and quantization",
           "short": "Edge LLM serving and speculative decoding",
           "expected": "2027",
-          "url": "https://www.linkedin.com/in/xiangchen-li-aba77825b/"
+          "url": "https://www.linkedin.com/in/xiangchen-li-aba77825b/",
+          "photo": "assets/people/xiangchen-li.jpg"
         },
         {
           "name": "Shunyu Yao",
@@ -48,7 +49,8 @@
           "short": "Efficient vision–language model inference",
           "expected": "2028",
           "note": "Co-advised with Bo Ji",
-          "url": "https://www.linkedin.com/in/hasan-arif-8b78a61a3/"
+          "url": "https://www.linkedin.com/in/hasan-arif-8b78a61a3/",
+          "photo": "assets/people/hasan-arif.jpg"
         },
         {
           "name": "Jiakun Fan",
@@ -56,7 +58,8 @@
           "affiliation": "Computer Science, Virginia Tech",
           "topic": "LLM and diffusion model serving on constrained GPUs",
           "expected": "2029",
-          "url": "https://www.linkedin.com/in/jiakun-fan-6a748828a/"
+          "url": "https://www.linkedin.com/in/jiakun-fan-6a748828a/",
+          "photo": "assets/people/jiakun-fan.jpg"
         },
         {
           "name": "Yunqi Shen",
@@ -73,7 +76,8 @@
           "topic": "Efficient diffusion inference and mixed-precision optimization",
           "short": "Efficient diffusion model inference",
           "expected": "2029",
-          "url": "https://www.linkedin.com/in/farhana-amin-0223b0172/"
+          "url": "https://www.linkedin.com/in/farhana-amin-0223b0172/",
+          "photo": "assets/people/farhana-amin.jpg"
         },
         {
           "name": "Mona Moghadampanah",
@@ -82,7 +86,8 @@
           "topic": "Energy characterization and control for multimodal LLM inference",
           "short": "Energy of multimodal LLM inference",
           "expected": "2029",
-          "url": "https://www.linkedin.com/in/mona-mp/"
+          "url": "https://www.linkedin.com/in/mona-mp/",
+          "photo": "assets/people/mona-moghadampanah.jpg"
         },
         {
           "name": "Adib Rezaei Shahmirzadi",
@@ -91,7 +96,8 @@
           "topic": "Long-context prefill parallelization and distributed KV-cache",
           "short": "Long-context prefill and distributed KV-cache",
           "expected": "2029",
-          "url": "https://www.linkedin.com/in/adib-rezaei/"
+          "url": "https://www.linkedin.com/in/adib-rezaei/",
+          "photo": "assets/people/adib-rezaei-shahmirzadi.jpg"
         },
         {
           "name": "Sina Heidari",
