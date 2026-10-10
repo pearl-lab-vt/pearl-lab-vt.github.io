@@ -1,4 +1,5 @@
 {
+  "_comment": "Current members appear on the People page and, with their portraits, on the home page. Optional per member: photo (add one with scripts/add-photo.py; a member without a photo shows initials) and short (a one-line topic for the home page; topic is used when short is absent).",
   "groups": [
     {
       "id": "director",
@@ -9,7 +10,8 @@
           "role": "John W. Hancock Jr. Professor of Engineering",
           "affiliation": "Computer Science, Virginia Tech",
           "url": "https://dsniko.github.io",
-          "email": "dsn@vt.edu"
+          "email": "dsn@vt.edu",
+          "photo": "assets/people/dimitrios-s-nikolopoulos.jpg"
         }
       ]
     },
@@ -23,6 +25,7 @@
           "role": "Ph.D. Researcher",
           "affiliation": "Electrical and Computer Engineering, Virginia Tech",
           "topic": "Edge LLM serving, speculative decoding, model partitioning and quantization",
+          "short": "Edge LLM serving and speculative decoding",
           "expected": "2027",
           "url": "https://www.linkedin.com/in/xiangchen-li-aba77825b/"
         },
@@ -31,6 +34,7 @@
           "role": "Ph.D. Researcher",
           "affiliation": "Computer Science, Virginia Tech",
           "topic": "Tiered memory systems and language virtual machines",
+          "short": "Tiered memory and language virtual machines",
           "expected": "2026",
           "note": "Co-advised with Ali R. Butt",
           "url": "https://www.linkedin.com/in/shunyu-yao-3b6a53189/"
@@ -40,6 +44,7 @@
           "role": "Ph.D. Researcher",
           "affiliation": "Computer Science, Virginia Tech",
           "topic": "Efficient inference for high-resolution vision–language models",
+          "short": "Efficient vision–language model inference",
           "expected": "2028",
           "note": "Co-advised with Bo Ji",
           "url": "https://www.linkedin.com/in/hasan-arif-8b78a61a3/"
@@ -65,6 +70,7 @@
           "role": "Ph.D. Researcher",
           "affiliation": "Computer Science, Virginia Tech",
           "topic": "Efficient diffusion inference and mixed-precision optimization",
+          "short": "Efficient diffusion model inference",
           "expected": "2029",
           "url": "https://www.linkedin.com/in/farhana-amin-0223b0172/"
         },
@@ -73,6 +79,7 @@
           "role": "Ph.D. Researcher",
           "affiliation": "Computer Science, Virginia Tech",
           "topic": "Energy characterization and control for multimodal LLM inference",
+          "short": "Energy of multimodal LLM inference",
           "expected": "2029",
           "url": "https://www.linkedin.com/in/mona-mp/"
         },
@@ -81,6 +88,7 @@
           "role": "Ph.D. Researcher",
           "affiliation": "Computer Science, Virginia Tech",
           "topic": "Long-context prefill parallelization and distributed KV-cache",
+          "short": "Long-context prefill and distributed KV-cache",
           "expected": "2029",
           "url": "https://www.linkedin.com/in/adib-rezaei/"
         },
@@ -90,7 +98,8 @@
           "affiliation": "Computer Science, Virginia Tech",
           "topic": "Agentic AI for HPC code optimization",
           "expected": "2029",
-          "url": ""
+          "url": "https://s1naheidari.github.io/",
+          "photo": "assets/people/sina-heidari.jpg"
         }
       ]
     }

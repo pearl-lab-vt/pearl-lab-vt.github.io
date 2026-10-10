@@ -148,9 +148,35 @@ function renderSponsors(sponsors) {
 
 /* ---------- home ---------- */
 
+/* Front-page portrait strip: the director, then every current member in the
+   order of data/people.json. Each portrait links to the member's own page. */
+function renderTeam(people) {
+  const base = window.PEARL_BASE || '';
+  const members = people.groups.flatMap(g => g.members.map(m => ({ ...m, group: g.id })));
+  if (!members.length) return '';
+  return `<div class="wrap">
+    <div class="section-head">
+      <h2>People</h2>
+      <a href="${base}people.html">Members and alumni &rarr;</a>
+    </div>
+    <ul class="team">
+      ${members.map(m => {
+        const tag = m.url ? 'a' : 'div';
+        const href = m.url ? ` href="${esc(m.url)}"` : '';
+        const line = m.group === 'director' ? 'Director' : (m.short || m.topic || m.role);
+        return `<li><${tag} class="member"${href}>
+          ${avatar(m, 'portrait')}
+          <span class="member-name">${esc(m.name)}</span>
+          <span class="member-line">${esc(line)}</span>
+        </${tag}></li>`;
+      }).join('')}
+    </ul>
+  </div>`;
+}
+
 async function renderHome() {
-  const [site, research, news, sponsors] = await Promise.all(
-    [load('site'), load('research'), load('news'), load('sponsors')]);
+  const [site, research, news, sponsors, people] = await Promise.all(
+    [load('site'), load('research'), load('news'), load('sponsors'), load('people')]);
   const base = window.PEARL_BASE || '';
 
   el('#hero').innerHTML = `<div class="wrap">
@@ -163,6 +189,9 @@ async function renderHome() {
       ${esc(site.director.title)} &middot;
       ${site.departments.map(d => `<a href="${esc(d.url)}">${esc(d.name)}</a>`).join(', ')}</p>
   </div>`;
+
+  const team = el('#team');
+  if (team) team.innerHTML = renderTeam(people);
 
   const sponsorBand = el('#sponsors');
   if (sponsorBand) sponsorBand.innerHTML = renderSponsors(sponsors);
@@ -281,10 +310,22 @@ async function renderResearch() {
 
 /* ---------- people ---------- */
 
+/* A portrait if data/people.json names one, otherwise the member's initials.
+   If the file is missing the <img> removes itself and the initials show, so a
+   typo in a path never leaves a broken-image icon on the page. */
+function avatar(p, cls) {
+  const base = window.PEARL_BASE || '';
+  const mono = `<span class="mono">${esc(initials(p.name))}</span>`;
+  if (!p.photo) return `<div class="${cls}" aria-hidden="true">${mono}</div>`;
+  return `<div class="${cls} has-photo">${mono}<img src="${base}${esc(p.photo)}"
+      alt="${esc(p.name)}" loading="lazy" decoding="async"
+      onerror="this.parentNode.classList.remove('has-photo');this.remove();"></div>`;
+}
+
 function personCard(p) {
   const nameHtml = p.url ? `<a href="${esc(p.url)}">${esc(p.name)}</a>` : esc(p.name);
   return `<div class="person">
-    <div class="avatar" aria-hidden="true">${esc(initials(p.name))}</div>
+    ${avatar(p, 'avatar')}
     <div>
       <div class="name">${nameHtml}</div>
       <div class="role">${esc(p.role)}${p.expected ? ` &middot; expected ${esc(p.expected)}` : ''}</div>

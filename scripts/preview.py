@@ -20,6 +20,13 @@ css = (ROOT / "assets" / "style.css").read_text(encoding="utf-8")
 js = (ROOT / "assets" / "app.js").read_text(encoding="utf-8")
 data = {n: json.loads((ROOT / "data" / f"{n}.json").read_text(encoding="utf-8"))
         for n in ("site", "research", "people", "publications", "news", "sponsors")}
+# Inline member portraits too, so the preview shows them wherever the file is opened.
+for group in data["people"]["groups"]:
+    for m in group["members"]:
+        photo = ROOT / m.get("photo", "")
+        if m.get("photo") and photo.is_file():
+            m["photo"] = "data:image/jpeg;base64," + base64.b64encode(photo.read_bytes()).decode()
+
 favicon = base64.b64encode((ROOT / "assets" / "favicon.png").read_bytes()).decode()
 logo = (ROOT / "assets" / "logo.svg").read_text(encoding="utf-8")
 
@@ -32,7 +39,7 @@ const PAGES = ['index.html', 'research.html', 'people.html', 'publications.html'
 
 function show(page) {
   document.querySelector('main').innerHTML = {
-    'index.html': '<section class="hero" id="hero"></section><section id="thrusts"></section><section id="latest"></section>',
+    'index.html': '<section class="hero" id="hero"></section><section class="team-band" id="team"></section><section class="sponsors" id="sponsors"></section><section id="thrusts"></section><section id="latest"></section>',
     'research.html': '<section id="research" style="border:0"></section>',
     'people.html': '<section id="people" style="border:0"></section>',
     'publications.html': '<section id="publications" style="border:0"></section>',
