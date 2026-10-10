@@ -257,8 +257,7 @@ async function renderNews() {
   el('#news').innerHTML = `<div class="wrap">
     <div class="eyebrow">Updates</div>
     <h1>News</h1>
-    <p class="lede" style="max-width:60ch">Publications, awards, funding and group news. Items are
-      also distributed via our <a href="${window.PEARL_BASE || ''}feed.xml">RSS feed</a> and on
+    <p class="lede" style="max-width:60ch">Publications, awards, funding, and group news. Each item also appears in our <a href="${window.PEARL_BASE || ''}feed.xml">RSS feed</a> and on
       <a href="${esc((DATA.site && DATA.site.links.linkedin) || '#')}">LinkedIn</a>.</p>
     <div class="filters" id="news-filters">
       <button aria-pressed="true" data-cat="">All</button>
@@ -376,13 +375,12 @@ async function renderPeople() {
 
     <section style="border:0;padding:44px 0 0">
       <div class="callout">
-        <p><strong>Prospective students.</strong> Doctoral students are admitted through the
-        Virginia Tech <a href="https://website.cs.vt.edu/academic/graduate.html">Computer Science</a>
-        graduate program; further guidance appears on the director's
-        <a href="https://dsniko.github.io/prospective-students/">prospective students page</a>.
-        Undergraduate researchers are supervised throughout the academic year.
-        Enquiries, accompanied by a curriculum vitae and a brief statement of research interests,
-        may be addressed to <a href="mailto:dsn@vt.edu">dsn@vt.edu</a>.</p>
+        <p><strong>Prospective students.</strong> Doctoral students apply through the Virginia Tech
+        <a href="https://website.cs.vt.edu/academic/graduate.html">Computer Science</a> graduate program.
+        The director's <a href="https://dsniko.github.io/prospective-students/">prospective students page</a>
+        gives current openings and further guidance. The lab hosts undergraduate researchers throughout
+        the academic year. Send inquiries to <a href="mailto:dsn@vt.edu">dsn@vt.edu</a> with a
+        curriculum vitae and a short statement of research interests.</p>
       </div>
     </section>
   </div>`;

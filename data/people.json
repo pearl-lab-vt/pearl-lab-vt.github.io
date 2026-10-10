@@ -18,13 +18,13 @@
     {
       "id": "phd",
       "title": "Ph.D. Researchers",
-      "note": "Seven students are supervised as primary advisor and two are co-supervised.",
+      "note": "The director is primary advisor to seven students and co-advisor to two.",
       "members": [
         {
           "name": "Xiangchen Li",
           "role": "Ph.D. Researcher",
           "affiliation": "Electrical and Computer Engineering, Virginia Tech",
-          "topic": "Edge LLM serving, speculative decoding, model partitioning and quantization",
+          "topic": "Edge LLM serving, speculative decoding, model partitioning, and quantization",
           "short": "Edge LLM serving and speculative decoding",
           "expected": "2027",
           "url": "https://www.linkedin.com/in/xiangchen-li-aba77825b/",
@@ -65,7 +65,7 @@
           "name": "Yunqi Shen",
           "role": "Ph.D. Researcher",
           "affiliation": "Computer Science, Virginia Tech",
-          "topic": "GPU unified memory, page prefetching and migration",
+          "topic": "GPU unified memory, page prefetching, and migration",
           "expected": "2029",
           "url": "https://www.linkedin.com/in/yunqi-shen-7a0859323/"
         },
@@ -93,8 +93,8 @@
           "name": "Adib Rezaei Shahmirzadi",
           "role": "Ph.D. Researcher",
           "affiliation": "Computer Science, Virginia Tech",
-          "topic": "Long-context prefill parallelization and distributed KV-cache",
-          "short": "Long-context prefill and distributed KV-cache",
+          "topic": "Long-context prefill parallelization and distributed key-value caches",
+          "short": "Long-context prefill and distributed caching",
           "expected": "2029",
           "url": "https://www.linkedin.com/in/adib-rezaei/",
           "photo": "assets/people/adib-rezaei-shahmirzadi.jpg"
@@ -103,7 +103,7 @@
           "name": "Sina Heidari",
           "role": "Ph.D. Researcher",
           "affiliation": "Computer Science, Virginia Tech",
-          "topic": "Agentic AI for HPC code optimization",
+          "topic": "Agentic AI for high-performance code optimization",
           "expected": "2029",
           "url": "https://s1naheidari.github.io/",
           "photo": "assets/people/sina-heidari.jpg"
@@ -507,5 +507,5 @@
       "topic": "Application Parallelization and Optimization on Cell/BE"
     }
   ],
-  "alumni_note": "This list records members of the group at Virginia Tech. Students and postdoctoral researchers supervised at Queen's University Belfast, the University of Crete and the College of William &amp; Mary are recorded on the director's <a href=\"https://dsniko.github.io/mentees/\">personal page</a>."
+  "alumni_note": "This list covers group members at Virginia Tech. The director's <a href=\"https://dsniko.github.io/mentees/\">personal page</a> lists students and postdoctoral researchers from Queen's University Belfast, the University of Crete, and the College of William &amp; Mary."
 }
