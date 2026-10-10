@@ -46,7 +46,7 @@
       "date": "2026-07-06",
       "category": "papers",
       "title": "DiffPro accepted at ECCV 2026",
-      "summary": "DiffPro sets numerical precision jointly across diffusion timesteps and network layers rather than fixing it once for the whole model. The paper appears at the European Conference on Computer Vision in Malmö this September. Congratulations to Farhana Amin, Sabrina Afroz, Kanchon Gharami and Mona Moghadampanah.",
+      "summary": "DiffPro sets numerical precision jointly across diffusion timesteps and network layers rather than fixing it once for the whole model. The paper appears at the European Conference on Computer Vision in Malmö this September. Congratulations to Farhana Amin, Sabiha Afroz, Kanchon Gharami and Mona Moghadampanah.",
       "body": "<p>The work grew out of the SC'25 posters on hybrid parallel diffusion and memory-aware coarse-to-fine inference.</p>",
       "links": []
     },
@@ -200,7 +200,7 @@
       "category": "papers",
       "title": "Four PEARL posters at SC'25",
       "summary": "The lab presented four posters at SC'25 in St. Louis, covering long-context prefill parallelization, hybrid parallel diffusion, precision optimization for diffusion inference, and energy characterization of multimodal LLM inference. A strong showing from a first-year Ph.D. cohort.",
-      "body": "<ul><li><strong>HydraCache: Long-Context Prefill Parallelization via Distributed Cache Blending</strong> — Adib Rezaei Shahmirzadi, Sadegh Shabihi, Feiyang Huang</li><li><strong>Divide, Conquer, and Denoise: Hybrid Parallel Diffusion with Memory-Aware Coarse-to-Fine Inference</strong> — Farhana Amin, Kanchon Gharami</li><li><strong>DiffPro: Joint Timestep and Layer-Wise Precision Optimization for Efficient Diffusion Inference</strong> — Farhana Amin, Kanchon Gharami</li><li><strong>Energy-Efficient Multimodal LLM Inference: Stage-Level Characterization and Input-Aware Controls</strong> — Mona Moghadampanah, Adib Rezaei Shahmirzadi</li></ul>",
+      "body": "<ul><li><strong>HydraCache: LLM Inference Prefill Parallelization Through Distributed Cache Blending</strong> — Adib Rezaei Shahmirzadi, Shayan Shabihi, Mona Moghadampanah, Furong Huang</li><li><strong>Divide, Conquer, and Denoise: Hybrid Parallel Diffusion with Memory-Aware Coarse-to-Fine Inference</strong> — Farhana Amin, Kanchon Gharami</li><li><strong>DiffPro: Joint Timestep and Layer-Wise Precision Optimization for Efficient Diffusion Inference</strong> — Farhana Amin, Kanchon Gharami</li><li><strong>Energy-Efficient Multimodal LLM Inference: Stage-Level Characterization and Input-Aware Controls</strong> — Mona Moghadampanah, Adib Rezaei Shahmirzadi</li></ul>",
       "links": []
     },
     {
@@ -208,7 +208,7 @@
       "date": "2025-10-14",
       "category": "papers",
       "title": "Memory tiering in the Python virtual machine at SPLASH VMIL",
-      "summary": "Python programs place data across memory tiers badly, because the interpreter knows what objects mean while the operating system knows where the pages are, and neither tells the other. Our work on memory tiering inside the virtual machine appeared at the 17th SPLASH Workshop on Virtual Machines and Language Implementations in Singapore. Congratulations to Yuze Li, Shunyu Yao and co-authors.",
+      "summary": "Python programs place data across memory tiers badly, because the interpreter knows what objects mean while the operating system knows where the pages are, and neither tells the other. Our work on memory tiering inside the virtual machine appeared at the 17th SPLASH Workshop on Virtual Machines and Intermediate Languages in Singapore. Congratulations to Yuze Li, Shunyu Yao and co-authors.",
       "links": [
         {
           "label": "DOI",

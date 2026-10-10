@@ -93,7 +93,7 @@
     },
     {
       "title": "DiffPro: Joint Timestep and Layer-Wise Precision Optimization for Efficient Diffusion Inference",
-      "authors": "Farhana Amin, Sabrina Afroz, Kanchon Gharami, Mona Moghadampanah, Dimitrios S. Nikolopoulos",
+      "authors": "Farhana Amin, Sabiha Afroz, Kanchon Gharami, Mona Moghadampanah, Dimitrios S. Nikolopoulos",
       "venue": "19th European Conference on Computer Vision (ECCV), Malmö",
       "year": 2026,
       "type": "conference",
@@ -191,7 +191,7 @@
       "url": "https://doi.org/10.1145/3769102.3770608"
     },
     {
-      "title": "HiRED: Attention-Guided Token Dropping for Efficient Inference of High-Resolution Vision-Language Models in Resource-Constrained Environments",
+      "title": "HiRED: Attention-Guided Token Dropping for Efficient Inference of High-Resolution Vision-Language Models",
       "authors": "Kazi Hasan Ibn Arif, JinYi Yoon, Dimitrios S. Nikolopoulos, Hans Vandierendonck, Deepu John, Bo Ji",
       "venue": "39th AAAI Conference on Artificial Intelligence, Philadelphia",
       "year": 2025,
@@ -200,9 +200,9 @@
       "url": "https://doi.org/10.1609/aaai.v39i2.32171"
     },
     {
-      "title": "Memory Tiering in the Python Virtual Machine",
+      "title": "Memory Tiering in Python Virtual Machine",
       "authors": "Yuze Li, Shunyu Yao, Jaiaid Mobin, Tianyi Zhan, M. Mustafa Rafique, Dimitrios S. Nikolopoulos, Kirshanthan Sundararajah, Ali R. Butt",
-      "venue": "17th SPLASH Workshop on Virtual Machines and Language Implementations (VMIL), Singapore",
+      "venue": "17th SPLASH Workshop on Virtual Machines and Intermediate Languages (VMIL), Singapore",
       "year": 2025,
       "type": "workshop",
       "topic": "memory",
@@ -218,8 +218,8 @@
       "url": "https://doi.org/10.1109/OJCAS.2025.3589132"
     },
     {
-      "title": "HydraCache: Long-Context Prefill Parallelization via Distributed Cache Blending",
-      "authors": "Adib Rezaei Shahmirzadi, Sadegh Shabihi, Feiyang Huang, Dimitrios S. Nikolopoulos",
+      "title": "HydraCache: LLM Inference Prefill Parallelization Through Distributed Cache Blending",
+      "authors": "Adib Rezaei Shahmirzadi, Shayan Shabihi, Mona Moghadampanah, Furong Huang, Dimitrios S. Nikolopoulos",
       "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis, Poster, St. Louis",
       "year": 2025,
       "type": "poster",
@@ -263,7 +263,7 @@
       "url": "https://doi.org/10.1109/IPDPS57955.2024.00019"
     },
     {
-      "title": "FrameFeedback: A Closed-Loop Control System for Dynamic Offloading of Real-Time Edge Inference",
+      "title": "FrameFeedback: A Closed-Loop Control System for Dynamic Offloading Real-Time Edge Inference",
       "authors": "Matthew Jackson, Bo Ji, Dimitrios S. Nikolopoulos",
       "venue": "IEEE International Parallel and Distributed Processing Symposium Workshops (IPDPSW)",
       "year": 2024,
@@ -290,7 +290,7 @@
       "url": "https://doi.org/10.1145/3626253.3635591"
     },
     {
-      "title": "Towards an Efficient Python Interpreter for Tiered Memory Systems",
+      "title": "Towards Efficient Python Interpreter for Tiered Memory Systems",
       "authors": "Yuze Li, Shunyu Yao, Jaiaid Mobin, M. Mustafa Rafique, Dimitrios S. Nikolopoulos, Kirshanthan Sundararajah, Huaicheng Li, Ali R. Butt",
       "venue": "22nd USENIX Conference on File and Storage Technologies (FAST), Work in Progress",
       "year": 2024,

@@ -67,6 +67,12 @@ def pretty(date_str: str) -> str:
     return datetime.strptime(date_str, "%Y-%m-%d").strftime("%B %-d, %Y")
 
 
+def without_hashtags(s: str) -> str:
+    """Drop the trailing run of #hashtags. They belong in the LinkedIn post
+    (the feed keeps them) but read as clutter on the site."""
+    return re.sub(r"(\s+#\w+)+\s*$", "", s or "")
+
+
 def published(items: list[dict]) -> list[dict]:
     out = [i for i in items if not i.get("draft")]
     out.sort(key=lambda i: i["date"], reverse=True)
@@ -162,7 +168,7 @@ def build_articles(site: dict, items: list[dict]) -> int:
         links = item.get("links") or []
         page = ARTICLE.format(
             title_esc=html.escape(item["title"], quote=True),
-            summary_esc=html.escape(item["summary"], quote=True),
+            summary_esc=html.escape(without_hashtags(item["summary"]), quote=True),
             url=url,
             date=item["date"],
             pretty_date=pretty(item["date"]),

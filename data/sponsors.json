@@ -1,5 +1,5 @@
 {
-  "_comment": "Acknowledgement of support. Sponsor NAMES always show and need nobody's permission. To add a logo: download the official file (see assets/sponsors/README.md for the source and the permission position for each), save it in assets/sponsors/ under exactly the filename in `file`, and it appears automatically — no code change. Until the file exists the entry shows the name alone. Set \"hidden\": true to keep an entry on file without displaying it.",
+  "_comment": "Acknowledgement of support. Sponsor NAMES always show and need nobody's permission. To add a logo: download the official file (see assets/sponsors/README.md for the source and the permission position for each), save it in assets/sponsors/, set `file` to its path (for example assets/sponsors/sony.png), and it appears — no code change. Until the file exists the entry shows the name alone. Set \"hidden\": true to keep an entry on file without displaying it.",
   "heading": "Our work is supported by",
   "note": "Any opinions, findings, and conclusions or recommendations expressed on this site are those of the authors and do not necessarily reflect the views of our sponsors.",
   "items": [
@@ -18,13 +18,13 @@
     {
       "name": "Sony",
       "short": "Sony",
-      "file": "assets/sponsors/sony.png",
+      "file": "",
       "url": "https://www.sony.com"
     },
     {
       "name": "Amazon",
       "short": "Amazon",
-      "file": "assets/sponsors/amazon.png",
+      "file": "",
       "url": "https://www.amazon.science"
     },
     {

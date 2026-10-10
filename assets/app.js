@@ -29,6 +29,12 @@ function initials(name) {
     .map(w => w[0].toUpperCase()).join('');
 }
 
+/* News summaries double as LinkedIn posts and may end in #hashtags. The feed
+   keeps them; the site drops the trailing run. */
+function withoutHashtags(s) {
+  return String(s || '').replace(/(\s+#\w+)+\s*$/, '');
+}
+
 function published(items) {
   return items.filter(i => !i.draft).sort((a, b) => b.date.localeCompare(a.date));
 }
@@ -137,6 +143,7 @@ function renderSponsors(sponsors) {
       ${items.map(s => `<li class="sponsor${s.file ? '' : ' nologo'}">
         <a class="sponsor-link" href="${esc(s.url)}">
           ${s.file ? `<img src="${base}${esc(s.file)}" alt="${esc(s.name)}" loading="lazy"
+             onload="if(this.naturalWidth<1.5*this.naturalHeight)this.classList.add('compact');"
              onerror="this.closest('.sponsor').classList.add('nologo');this.remove();">` : ''}
           <span class="sponsor-name">${esc(s.name)}</span>
         </a>
@@ -152,7 +159,9 @@ function renderSponsors(sponsors) {
    order of data/people.json. Each portrait links to the member's own page. */
 function renderTeam(people) {
   const base = window.PEARL_BASE || '';
-  const members = people.groups.flatMap(g => g.members.map(m => ({ ...m, group: g.id })));
+  const members = people.groups.flatMap(g => g.members
+    .filter(m => m.home !== false)
+    .map(m => ({ ...m, group: g.id })));
   if (!members.length) return '';
   return `<div class="wrap">
     <div class="section-head">
@@ -165,7 +174,7 @@ function renderTeam(people) {
         const href = m.url ? ` href="${esc(m.url)}"` : '';
         const line = m.group === 'director' ? 'Director' : (m.short || m.topic || m.role);
         return `<li><${tag} class="member"${href}>
-          ${avatar(m, 'portrait')}
+          ${avatar(m, 'portrait', false)}
           <span class="member-name">${esc(m.name)}</span>
           <span class="member-line">${esc(line)}</span>
         </${tag}></li>`;
@@ -233,7 +242,7 @@ function newsRow(item) {
     <div class="news-body">
       <h3><a href="${base}news/${esc(item.slug)}/">${esc(item.title)}</a>${
         item.category ? `<span class="tag">${esc(item.category)}</span>` : ''}</h3>
-      <p>${esc(item.summary)}</p>
+      <p>${esc(withoutHashtags(item.summary))}</p>
       ${item.body ? `<div class="extra">${item.body}</div>` : ''}
       ${links ? `<div class="linkrow">${links}</div>` : ''}
     </div>
@@ -313,12 +322,12 @@ async function renderResearch() {
 /* A portrait if data/people.json names one, otherwise the member's initials.
    If the file is missing the <img> removes itself and the initials show, so a
    typo in a path never leaves a broken-image icon on the page. */
-function avatar(p, cls) {
+function avatar(p, cls, lazy = true) {
   const base = window.PEARL_BASE || '';
   const mono = `<span class="mono">${esc(initials(p.name))}</span>`;
   if (!p.photo) return `<div class="${cls}" aria-hidden="true">${mono}</div>`;
   return `<div class="${cls} has-photo">${mono}<img src="${base}${esc(p.photo)}"
-      alt="${esc(p.name)}" loading="lazy" decoding="async"
+      alt="${esc(p.name)}"${lazy ? ' loading="lazy"' : ''} decoding="async"
       onerror="this.parentNode.classList.remove('has-photo');this.remove();"></div>`;
 }
 
@@ -369,8 +378,9 @@ async function renderPeople() {
       <div class="callout">
         <p><strong>Prospective students.</strong> Doctoral students are admitted through the
         Virginia Tech <a href="https://website.cs.vt.edu/academic/graduate.html">Computer Science</a>
-        and <a href="https://ece.vt.edu/grad.html">Electrical and Computer Engineering</a> graduate
-        programs. Undergraduate researchers are supervised throughout the academic year.
+        graduate program; further guidance appears on the director's
+        <a href="https://dsniko.github.io/prospective-students/">prospective students page</a>.
+        Undergraduate researchers are supervised throughout the academic year.
         Enquiries, accompanied by a curriculum vitae and a brief statement of research interests,
         may be addressed to <a href="mailto:dsn@vt.edu">dsn@vt.edu</a>.</p>
       </div>

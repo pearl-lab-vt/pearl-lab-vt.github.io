@@ -1,13 +1,13 @@
 {
   "headline": "Efficient and resilient systems for machine learning across the computing continuum",
-  "intro": "The cost of executing a model, measured in energy, in hardware, and in latency, increasingly determines where that model can be deployed and which institutions can afford to use it. PEARL investigates the runtime systems, memory hierarchies, schedulers, and compilers that govern this cost. Our objective is to make demanding inference and training workloads tractable on the hardware that is actually available, from embedded and wearable devices through edge infrastructure to warehouse-scale computers.",
-  "closing": "Efficiency in this setting is a question of access rather than of engineering elegance. The performance and energy characteristics of a system determine whether a given capability remains confined to well-provisioned data centers or becomes available in a clinic, a classroom, a field station, or a handheld device.",
+  "intro": "The cost of executing a model, measured in energy, in hardware, and in latency, increasingly determines where that model can be deployed and which institutions can afford to use it. PEARL investigates the runtime systems, memory hierarchies, schedulers, and compilers that govern this cost. Our objective is to make demanding inference and training workloads tractable on the hardware institutions already have, from embedded and wearable devices through edge infrastructure to warehouse-scale computers.",
+  "closing": "In this setting, efficiency is a question of access. The performance and energy profile of a system decides whether a capability stays inside well-provisioned data centers or reaches a clinic, a classroom, a field station, or a handheld device.",
   "thrusts": [
     {
       "id": "llm-serving",
       "title": "Efficient serving of large generative models",
-      "stake": "Inference, rather than training, now dominates the aggregate energy and capacity cost of deployed models.",
-      "blurb": "Training a large model is a bounded expense incurred once; serving it is an unbounded expense incurred across billions of invocations. Our work restructures the serving stack along four axes: asynchronous overlap of CPU and GPU execution to eliminate idle time on either processor, reorganization and reuse of the key-value cache, elimination of token-level redundancy that does not affect the output, and selection of numerical precision per layer and per timestep rather than uniformly across the model.",
+      "stake": "Inference now outweighs training in the aggregate energy and capacity cost of deployed models.",
+      "blurb": "Training a large model is a bounded expense incurred once. Serving it is an open-ended expense incurred across billions of invocations. Our work restructures the serving stack along four axes. We overlap CPU and GPU execution so that both processors stay busy. We reorganize and reuse the key-value cache. We drop redundant tokens that leave the output unchanged. We also select numerical precision separately for each layer and each timestep.",
       "highlights": [
         "APEX — asynchronous CPU–GPU execution for online LLM inference on memory-constrained GPUs",
         "dLLM-Serve — memory management for diffusion language model serving",
@@ -34,7 +34,7 @@
       "id": "memory",
       "title": "Memory systems and accelerator utilization",
       "stake": "Accelerator capacity is scarce and costly, yet utilization in production deployments remains substantially below the achievable maximum.",
-      "blurb": "An accelerator dedicated to a single tenant is typically underutilized, and a working set that exceeds fast memory reduces the throughput of an entire job to that of the slowest tier in the hierarchy. Neither condition is remedied by additional hardware, since both arise from scheduling and memory-management policy rather than from insufficient capacity. We develop mechanisms for safe spatial sharing of accelerators among concurrent workloads, for predicting page access ahead of demand faults, and for placing data across memory tiers without requiring explicit programmer intervention.",
+      "blurb": "An accelerator dedicated to a single tenant is typically underutilized, and a working set that exceeds fast memory reduces the throughput of an entire job to that of the slowest tier in the hierarchy. Both conditions arise from scheduling and memory-management policy, and policy is where we address them. We develop mechanisms for safe spatial sharing of accelerators among concurrent workloads, for predicting page access ahead of demand faults, and for placing data across memory tiers without requiring explicit programmer intervention.",
       "highlights": [
         "ParvaGPU — spatial GPU sharing for large-scale DNN inference in cloud environments",
         "Stride-aware page prefetching for GPU unified memory via Markov pattern prediction",
@@ -46,7 +46,7 @@
       "id": "agentic-hpc",
       "title": "Agentic methods for high-performance code optimization",
       "stake": "Scientific software commonly attains a fraction of the performance its target hardware permits, and the expertise required to close that gap is scarce.",
-      "blurb": "Computational science codes are written predominantly by domain scientists rather than performance engineers, and the resulting gap between attained and achievable performance is frequently an order of magnitude. We develop multi-agent systems that analyze such code, propose transformations, evaluate them empirically, and retain only those changes that are validated by measurement. Establishing confidence in machine-generated optimizations requires benchmarks and correctness guarantees, which we treat as a component of the research rather than as an afterthought. Undergraduate researchers contribute substantially to this effort.",
+      "blurb": "Domain scientists write most computational science codes, and the resulting gap between attained and achievable performance is frequently an order of magnitude. We develop multi-agent systems that analyze such code, propose transformations, evaluate them empirically, and retain only those changes that are validated by measurement. Establishing confidence in machine-generated optimizations requires benchmarks and correctness guarantees, and we treat both as part of the research. Undergraduate researchers contribute substantially to this effort.",
       "highlights": [
         "MARCO — multi-agent code optimization for high-performance computing",
         "FACT — compositional CUDA kernel synthesis grounded in CUTLASS C++",
@@ -58,7 +58,7 @@
     {
       "id": "resilience",
       "title": "Resilience and energy accounting at scale",
-      "stake": "At scale, hardware faults are routine rather than exceptional, and energy consumption constitutes a first-order design constraint.",
+      "stake": "At scale, hardware faults are routine, and energy consumption is a first-order design constraint.",
       "blurb": "A system that returns an incorrect result without indication, or that consumes its power budget without accounting for it, presents a more serious problem than one that fails observably. We characterize energy consumption at the granularity of execution stage, input modality, and instruction, and we develop recovery mechanisms that permit a long-running computation to survive component failure without restarting from its initial state. The intent is to render the cost and the correctness of a computation predictable before substantial machine time is committed to it.",
       "highlights": [
         "Modality inflation — energy characterization of multimodal LLM inference",

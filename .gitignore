@@ -14,3 +14,6 @@ __pycache__/
 
 # Scratch folder used when a synced drive blocks deletes
 /_to_delete/
+
+# Backups and scratch files
+*.bak

@@ -312,9 +312,11 @@ footer.site .links { display: flex; gap: 18px; flex-wrap: wrap; }
 /* ---------- home: people strip ---------- */
 .team {
   list-style: none; margin: 8px 0 0; padding: 0;
-  display: grid; gap: 30px 20px;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 30px 20px;
 }
+/* Fixed column widths with a centred last row, whatever the head count. */
+.team > li { flex: 0 0 calc((100% - 4 * 20px) / 5); min-width: 0; }
 .member {
   display: flex; flex-direction: column; align-items: center;
   text-align: center; text-decoration: none; color: inherit;
@@ -346,9 +348,10 @@ a.member:hover .member-name { color: var(--maroon); }
 @media (prefers-color-scheme: dark) {
   .portrait { background: linear-gradient(150deg, #2a1f24, #22191d); }
 }
-@media (max-width: 900px) { .team { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 900px) { .team > li { flex-basis: calc((100% - 2 * 20px) / 3); } }
 @media (max-width: 560px) {
-  .team { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px 14px; }
+  .team { gap: 26px 14px; }
+  .team > li { flex-basis: calc((100% - 14px) / 2); }
   .portrait { width: 112px; height: 112px; }
   .portrait .mono { font-size: 1.95rem; }
 }
@@ -380,6 +383,9 @@ a.member:hover .member-name { color: var(--maroon); }
   display: block;
   background: #fff; border-radius: 4px; padding: 5px 8px;
 }
+/* Square seals such as NSF's carry no wordmark, so at the strip's height they
+   read far smaller than the horizontal lockups. Give them more height. */
+.sponsor img.compact { max-height: 64px; padding: 4px; }
 .sponsor-link { display: block; text-decoration: none; }
 .sponsor.nologo { border-left-color: var(--orange); }
 /* The mark carries the name, so type appears only where no logo is shown:

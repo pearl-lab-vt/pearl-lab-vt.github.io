@@ -1,5 +1,5 @@
 {
-  "_comment": "Current members appear on the People page and, with their portraits, on the home page. Optional per member: photo (add one with scripts/add-photo.py; a member without a photo shows initials) and short (a one-line topic for the home page; topic is used when short is absent).",
+  "_comment": "Current members appear on the People page and, with their portraits, on the home page. Optional per member: photo (add one with scripts/add-photo.py; a member without a photo shows initials) short (a one-line topic for the home page; topic is used when short is absent), and home (set to false to leave a member off the home-page portraits).",
   "groups": [
     {
       "id": "director",
@@ -35,6 +35,7 @@
           "affiliation": "Computer Science, Virginia Tech",
           "topic": "Tiered memory systems and language virtual machines",
           "short": "Tiered memory and language virtual machines",
+          "home": false,
           "expected": "2026",
           "note": "Co-advised with Ali R. Butt",
           "url": "https://www.linkedin.com/in/shunyu-yao-3b6a53189/"
