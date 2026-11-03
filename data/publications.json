@@ -26,7 +26,7 @@
       "year": 2026,
       "type": "conference",
       "topic": "edge",
-      "url": "https://www.icecs2026.gr"
+      "url": "https://arxiv.org/abs/2610.08688"
     },
     {
       "title": "ZTA-Q: An Open-Source RISC-V Platform for Accurate Quantized CNN Inference",
@@ -35,7 +35,7 @@
       "year": 2026,
       "type": "conference",
       "topic": "edge",
-      "url": "https://www.icecs2026.gr"
+      "url": "https://arxiv.org/abs/2610.01867"
     },
     {
       "title": "DART: ML-Accelerated Surrogate for Real-Time CFD Digital Twins",
@@ -53,7 +53,7 @@
       "year": 2026,
       "type": "conference",
       "topic": "llm-serving",
-      "url": "https://openreview.net/forum?id=tTfAxTfTlC"
+      "url": "https://arxiv.org/abs/2608.22646"
     },
     {
       "title": "FACT: Compositional Kernel Synthesis with a Three-Stage Agentic Workflow",
@@ -89,7 +89,7 @@
       "year": 2026,
       "type": "conference",
       "topic": "llm-serving",
-      "url": "https://arxiv.org/abs/2511.11446"
+      "url": "https://doi.org/10.1007/978-3-032-37252-9_7"
     },
     {
       "title": "Stride-Aware Page Prefetching for GPU Unified Memory via Markov Pattern Prediction",
@@ -170,7 +170,34 @@
       "year": 2026,
       "type": "workshop",
       "topic": "resilience",
-      "url": "https://arxiv.org/abs/2512.22695"
+      "url": "https://doi.org/10.1109/IPDPSW71298.2026.00035"
+    },
+    {
+      "title": "Factorization-Guided Training and Inference for Diffusion-Drafted Speculative Decoding",
+      "authors": "Jiakun Fan, Min Xiao, Qiang Wang, Neiwen Ling, Zhichao Liu, Zhihao Jia, Dimitrios S. Nikolopoulos, Zijun Wei",
+      "venue": "arXiv:2610.23935 [cs.LG]",
+      "year": 2026,
+      "type": "preprint",
+      "topic": "llm-serving",
+      "url": "https://arxiv.org/abs/2610.23935"
+    },
+    {
+      "title": "CoEncode: Reclaiming Idle Encoder GPUs in Multi-Tenant Multimodal LLM Serving",
+      "authors": "Mona Moghadampanah, Xiangchen Li, Cheol-Ho Hong, Dimitrios S. Nikolopoulos",
+      "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis, Poster, Chicago",
+      "year": 2026,
+      "type": "poster",
+      "topic": "llm-serving",
+      "url": "https://sc26.supercomputing.org/"
+    },
+    {
+      "title": "E-dLLM: Energy-Efficient Diffusion LLM Inference via Phase-Aware DVFS",
+      "authors": "Mona Moghadampanah, Xiangchen Li, Farhana Amin, Dimitrios S. Nikolopoulos",
+      "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis, Poster, Chicago",
+      "year": 2026,
+      "type": "poster",
+      "topic": "resilience",
+      "url": "https://sc26.supercomputing.org/"
     },
     {
       "title": "SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving",
@@ -287,7 +314,7 @@
       "year": 2024,
       "type": "workshop",
       "topic": "memory",
-      "url": "https://www.usenix.org/conference/fast24/wips"
+      "url": "https://par.nsf.gov/servlets/purl/10495376"
     }
   ]
 }
