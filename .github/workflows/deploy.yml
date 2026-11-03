@@ -25,9 +25,10 @@ jobs:
           python-version: "3.12"
 
       # Validates data/*.json, then writes feed.xml, sitemap.xml,
-      # robots.txt and one page per news item under news/.
+      # robots.txt and one page per news item under news/. --prerender puts
+      # the header, footer and home-page hero into the static HTML for crawlers.
       - name: Build feed and news pages
-        run: python3 scripts/build.py
+        run: python3 scripts/build.py --prerender
 
       - uses: actions/configure-pages@v5
         with:
