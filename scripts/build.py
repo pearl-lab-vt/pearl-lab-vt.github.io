@@ -3,7 +3,8 @@
 Generate feed.xml and one permalink page per news item from data/news.json.
 
 Run it locally with:   python3 scripts/build.py
-GitHub Actions runs it on every push to main (see .github/workflows/deploy.yml).
+GitHub Actions runs it on every push to main with --prerender
+(see .github/workflows/deploy.yml and prerender() below).
 
 Nothing else on the site needs a build step — the HTML pages read the JSON
 directly in the browser. This script exists so that (a) LinkedIn / RSS readers
@@ -253,6 +254,91 @@ def build_sitemap(site: dict, items: list[dict]) -> None:
         f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n", encoding="utf-8")
 
 
+# ---------------------------------------------------------------------------
+# Prerendering (CI only)
+#
+# The pages render in the browser from data/*.json, so the HTML that crawlers
+# fetch first has empty <header>, <footer> and hero sections. With --prerender
+# (set in deploy.yml) this fills them with the same markup assets/app.js
+# produces, so the lab name, Virginia Tech, the department and the director
+# are in the static HTML. app.js replaces the contents on load as before.
+# Run locally without the flag; the HTML files in git stay hand-edited.
+# ---------------------------------------------------------------------------
+
+PAGES = [("index.html", "Home"), ("research.html", "Research"), ("people.html", "People"),
+         ("publications.html", "Publications"), ("news.html", "News")]
+
+
+def _e(s) -> str:
+    return html.escape("" if s is None else str(s), quote=True)
+
+
+def _depts(site: dict, sep: str) -> str:
+    return sep.join(f'<a href="{_e(d["url"])}">{_e(d["name"])}</a>' for d in site["departments"])
+
+
+def chrome_html(site: dict, current: str, base: str) -> dict[str, str]:
+    logo_path = ROOT / "assets" / "logo.svg"
+    logo = logo_path.read_text(encoding="utf-8") if logo_path.exists() else ""
+    inst_img = ""
+    if site.get("institution_logo"):
+        inst_img = (f'<img src="{base}{_e(site["institution_logo"])}" alt="{_e(site["institution"])}" '
+                    "onerror=\"this.closest('.inst').classList.add('nologo');this.remove();\">")
+    band = (f'<div class="wrap"><a class="inst" href="{_e(site.get("institution_url") or "https://www.vt.edu")}">'
+            f'{inst_img}<span class="inst-name">{_e(site["institution"])}</span></a>'
+            f'<span class="inst-depts">{_depts(site, " &middot; ")}</span></div>')
+    cur = ' aria-current="page"'
+    nav = "".join(f'<a href="{base}{h}"{cur if h == current else ""}>{label}</a>'
+                  for h, label in PAGES)
+    header = (f'<div class="wrap"><a class="brand" href="{base}index.html">'
+              + (f'<span class="logo" aria-hidden="true">{logo}</span>' if logo else "")
+              + f'<span class="mark">{_e(site["name"])}</span><span class="sub">{_e(site["tagline"])}</span></a>'
+              f'<nav class="site" aria-label="Main">{nav}</nav></div>')
+    l = site["links"]
+    extra = "".join(f'<a href="{_e(l[k])}">{label}</a>' for k, label in
+                    (("linkedin", "LinkedIn"), ("github", "GitHub"), ("scholar", "Scholar"), ("orcid", "ORCID"))
+                    if l.get(k))
+    footer = (f'<div class="wrap cols"><div><strong>{_e(site["name"])}</strong> — {_e(site["tagline"])}<br>'
+              f'{_depts(site, " &middot; ")}<br>{_e(site["institution"])}, {_e(site["location"])}</div>'
+              f'<div class="links"><a href="mailto:{_e(l["email"])}">Email</a>{extra}'
+              f'<a href="{base}feed.xml">RSS</a></div></div>')
+    return {"institution": band, "site-header": header, "site-footer": footer}
+
+
+def hero_html(site: dict, research: dict) -> str:
+    acr = site.get("acronym") or {}
+    acronym = ('<div class="acronym">' + "".join(f"<div><b>{_e(k)}</b>{_e(v)}</div>" for k, v in acr.items())
+               + "</div>") if acr else ""
+    d = site["director"]
+    return (f'<div class="wrap"><div class="eyebrow">{_e(site["institution"])}</div>'
+            f'<h1>{_e(research["headline"])}</h1><p class="lede">{_e(research["intro"])}</p>{acronym}'
+            f'<p class="meta">Directed by <a href="{_e(d["url"])}">{_e(d["name"])}</a>, {_e(d["title"])} &middot; '
+            f'{_depts(site, ", ")}</p></div>')
+
+
+def fill(page: str, elem_id: str, inner: str) -> str:
+    """Put `inner` inside the empty element with this id (no-op if already filled)."""
+    pat = re.compile(r'(<(\w+)\b[^>]*\bid="%s"[^>]*>)(</\2>)' % re.escape(elem_id))
+    return pat.sub(lambda m: m.group(1) + inner + m.group(3), page, count=1)
+
+
+def prerender(site: dict, research: dict, items: list[dict]) -> int:
+    targets = [(ROOT / h, h, "") for h, _ in PAGES]
+    targets += [(ROOT / "news" / i["slug"] / "index.html", "news.html", "../../") for i in items]
+    n = 0
+    for path, current, base in targets:
+        if not path.exists():
+            continue
+        page = path.read_text(encoding="utf-8")
+        for elem_id, inner in chrome_html(site, current, base).items():
+            page = fill(page, elem_id, inner)
+        if current == "index.html" and not base:
+            page = fill(page, "hero", hero_html(site, research))
+        path.write_text(page, encoding="utf-8")
+        n += 1
+    return n
+
+
 def main() -> int:
     site = load("site")
     news = load("news")
@@ -271,6 +357,8 @@ def main() -> int:
     n_articles = build_articles(site, items)
     n_feed = build_feed(site, news, items)
     build_sitemap(site, items)
+    if "--prerender" in sys.argv[1:]:
+        print(f"OK  prerendered {prerender(site, load('research'), items)} pages")
 
     drafts = sum(1 for i in news["items"] if i.get("draft"))
     print(f"OK  {n_articles} news pages, {n_feed} feed entries, {drafts} drafts skipped")
