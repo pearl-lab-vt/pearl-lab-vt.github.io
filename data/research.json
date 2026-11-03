@@ -1,13 +1,13 @@
 {
   "headline": "Efficient and resilient systems for machine learning, from wearable devices to warehouse-scale computers",
-  "intro": "Running a machine learning model costs energy, hardware, and time. These costs decide where a model can run and who can afford it. PEARL studies the runtime systems, memory hierarchies, schedulers, and compilers that set them. We build systems that run demanding models on the hardware people already have. Our work spans wearable devices, edge servers, and warehouse-scale computers.",
+  "intro": "Running a machine learning model costs energy, hardware, and time. These costs decide where a model can run and who can afford it. PEARL studies the runtime systems, memory hierarchies, schedulers, and compilers that set those costs. We build systems that run demanding models on the hardware people already have. Our work spans wearable devices, edge servers, and warehouse-scale computers.",
   "closing": "Efficiency decides who can use machine learning. When a model runs cheaply, it can serve a clinic, a classroom, a field station, or a phone.",
   "thrusts": [
     {
       "id": "llm-serving",
       "title": "Efficient serving of large generative models",
       "stake": "A model is trained once, but it is served for as long as it stays deployed.",
-      "blurb": "Every request to a large language model (LLM) consumes GPU memory, compute, and energy. Serving systems often leave a processor idle, keep redundant tokens, and apply one numerical precision to the whole model. Each of these choices wastes hardware or work. We restructure the serving stack in four ways. First, we overlap CPU and GPU execution. Second, we reorganize and reuse the key-value cache. Third, we drop tokens that leave the output unchanged. Fourth, we choose numerical precision for each layer and each timestep.",
+      "blurb": "Every request to a large language model (LLM) consumes GPU memory, compute, and energy. Serving systems often leave a processor idle, keep redundant tokens, and apply one numerical precision to the whole model. Each of these choices wastes hardware or work. We change the serving stack in four ways. First, we overlap CPU and GPU execution. Second, we reorganize and reuse the key-value cache. Third, we drop tokens that leave the output unchanged. Fourth, we choose numerical precision for each layer and each timestep.",
       "highlights": [
         "APEX: asynchronous CPU–GPU execution for online LLM inference on memory-constrained GPUs",
         "dLLM-Serve: memory management for serving diffusion language models",
@@ -45,11 +45,11 @@
     {
       "id": "agentic-hpc",
       "title": "Agentic methods for high-performance code optimization",
-      "stake": "Scientific codes often reach a fraction of their hardware's peak performance, and few experts can close the gap.",
+      "stake": "Scientific codes often reach a fraction of their hardware's peak performance, and few experts know how to tune them.",
       "blurb": "Domain scientists write most scientific software, and performance engineers are scarce. Large language models can propose code changes, but the proposals may run slower or compute wrong results. We build multi-agent systems that analyze code, propose transformations, and measure each one. A change survives only when measurement validates it. Benchmarks and correctness guarantees are part of the research itself. Undergraduate researchers contribute substantially to this work.",
       "highlights": [
         "MARCO: multi-agent code optimization for HPC",
-        "FACT: compositional CUDA kernel synthesis grounded in CUTLASS C++",
+        "FACT: compositional CUDA kernel synthesis built on CUTLASS C++",
         "LLM-guided runtime parameter optimization for energy-efficient inference",
         "AI-driven autonomous experimentation for turbulent flows",
         "Parallel Islands: an educational instrument for parallel computing"
@@ -59,7 +59,7 @@
       "id": "resilience",
       "title": "Resilience and energy accounting at scale",
       "stake": "At scale, hardware faults are routine, and energy is a first-order design constraint.",
-      "blurb": "A silent wrong answer does more harm than a visible crash. Large parallel jobs typically recover from a fault by restarting from a global checkpoint. Energy is usually measured for the whole machine. Global restart wastes the work of healthy processes. Machine-level energy readings hide which stage or input drives the cost. We measure energy per execution stage, input modality, and instruction. We build recovery mechanisms that let a long-running computation survive component failure without restarting from the beginning. Our goal is to make the cost and correctness of a computation predictable before it consumes substantial machine time.",
+      "blurb": "A silent wrong answer does more harm than a visible crash. Large parallel jobs typically recover from a fault by restarting from a global checkpoint. Energy is usually measured for the whole machine. Global restart wastes the work of healthy processes. Machine-level energy readings hide which stage or input accounts for the cost. We measure energy per execution stage, input modality, and instruction. We build recovery mechanisms that let a long-running computation survive component failure without restarting from the beginning. Our goal is to make the cost and correctness of a computation predictable before it consumes substantial machine time.",
       "highlights": [
         "Modality inflation: energy characterization of multimodal LLM inference",
         "Power Log'n'Roll: power-efficient localized rollback for Message Passing Interface (MPI) applications",
