@@ -200,6 +200,14 @@
       "url": "https://sc26.supercomputing.org/"
     },
     {
+      "title": "HPDC '26: Proceedings of the 35th International Symposium on High-Performance Parallel and Distributed Computing",
+      "authors": "Sanmukh Kuppannagari, Mehmet Koyuturk, Alfredo Goldman, Dimitrios S. Nikolopoulos (editors)",
+      "venue": "Association for Computing Machinery, Cleveland",
+      "year": 2026,
+      "type": "proceedings",
+      "url": "https://doi.org/10.1145/3806645"
+    },
+    {
       "title": "SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving",
       "authors": "Xiangchen Li, Dimitris Spatharakis, Saeid Ghafouri, Jiakun Fan, Hans Vandierendonck, Deepu John, Bo Ji, Dimitrios S. Nikolopoulos",
       "venue": "10th ACM/IEEE Symposium on Edge Computing (SEC), Washington, D.C.",
@@ -263,6 +271,33 @@
       "url": "https://sc25.supercomputing.org/proceedings/posters/poster_pages/post286.html"
     },
     {
+      "title": "QPART: Adaptive Model Quantization and Dynamic Workload Balancing for Accuracy-aware Edge Inference",
+      "authors": "Xiangchen Li, Saeid Ghafouri, Bo Ji, Hans Vandierendonck, Deepu John, Dimitrios S. Nikolopoulos",
+      "venue": "arXiv:2506.23934 [cs.DC]",
+      "year": 2025,
+      "type": "preprint",
+      "topic": "edge",
+      "url": "https://arxiv.org/abs/2506.23934"
+    },
+    {
+      "title": "MARCO: Multi-Agent Code Optimization with Real-Time Knowledge Integration for High-Performance Computing",
+      "authors": "Asif Rahman, Veljko Cvetkovic, Kathleen Reece, Aidan Walters, Yasir Hassan, Aneesh Tummeti, Bryan Torres, Denise Cooney, Margaret Ellis, Dimitrios S. Nikolopoulos",
+      "venue": "arXiv:2505.03906 [cs.DC]",
+      "year": 2025,
+      "type": "preprint",
+      "topic": "agentic-hpc",
+      "url": "https://arxiv.org/abs/2505.03906"
+    },
+    {
+      "title": "DiffPro: Joint Timestep and Layer-Wise Precision Optimization for Efficient Diffusion Inference",
+      "authors": "Farhana Amin, Kanchon Gharami, Dimitrios S. Nikolopoulos",
+      "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis, Poster, St. Louis",
+      "year": 2025,
+      "type": "poster",
+      "topic": "llm-serving",
+      "url": "https://sc25.supercomputing.org/proceedings/posters/poster_pages/post198.html"
+    },
+    {
       "title": "ParvaGPU: Efficient Spatial GPU Sharing for Large-Scale DNN Inference in Cloud Environments",
       "authors": "Munkyu Lee, Sihoon Seong, Minki Kang, Jihyuk Lee, Gap-Joo Na, In-Geol Chun, Dimitrios S. Nikolopoulos, Cheol-Ho Hong",
       "venue": "SC: International Conference for High Performance Computing, Networking, Storage and Analysis",
@@ -315,6 +350,15 @@
       "type": "workshop",
       "topic": "memory",
       "url": "https://par.nsf.gov/servlets/purl/10495376"
+    },
+    {
+      "title": "Tuning Fast Memory Size based on Modeling of Page Migration for Tiered Memory",
+      "authors": "Shangye Chen, Jin Huang, Shuangyan Yang, Jie Liu, Huaicheng Li, Dimitrios Nikolopoulos, Junhee Ryu, Jinho Baek, Kwangsik Shin, Dong Li",
+      "venue": "arXiv:2410.00328 [cs.PF]",
+      "year": 2024,
+      "type": "preprint",
+      "topic": "memory",
+      "url": "https://arxiv.org/abs/2410.00328"
     }
   ]
 }
